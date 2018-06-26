@@ -40,13 +40,13 @@ public class RecyclerViewComida {
 
     //@Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
-        holder.Nombre.setText(comidas.get(position).getNombre());
+        holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
         holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
         holder.Precio.setText(comidas.get(position).getPrecio());
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView Nombre;
+        TextView Nombre_comida;
         ImageView ComidaImg;
         TextView Precio;
         ImageButton btn_fav;
@@ -54,7 +54,7 @@ public class RecyclerViewComida {
         public MyViewHolder(View itemView){
             super(itemView);
 
-            Nombre = itemView.findViewById(R.id.txt_nombre);
+            Nombre_comida = itemView.findViewById(R.id.txt_nombre_comida);
             ComidaImg = itemView.findViewById(R.id.img_comida);
             Precio =itemView.findViewById(R.id.txt_precio);
             btn_fav = itemView.findViewById(R.id.imgbtn_fav);

@@ -1,12 +1,12 @@
 package com.fooduca.fooduca.POJO;
 
 public class Comida {
-    private String nombre;
+    private String nombre_comida;
     private String precio;
     private int ComidaImg;
 
-    public Comida(String nombre, String precio,int ComidaImg) {
-        this.nombre = nombre;
+    public Comida(String nombre_comida, String precio,int ComidaImg) {
+        this.nombre_comida = nombre_comida;
         this.precio = precio;
         this.ComidaImg = ComidaImg;
 
@@ -16,15 +16,16 @@ public class Comida {
         return precio;
     }
 
-    public void setPrecio(String descripcion) {
-        this.precio = descripcion;
+    public void setPrecio(String precio) {
+        this.precio = precio;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombre_comida() {
+        return nombre_comida;
     }
-    public void setNombre(String title) {
-        this.nombre = title;
+
+    public void setNombre_comida(String nombre_comida) {
+        this.nombre_comida = nombre_comida;
     }
 
     public int getComidaImg() {
