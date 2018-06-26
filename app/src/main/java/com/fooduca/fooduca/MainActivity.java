@@ -3,6 +3,8 @@ package com.fooduca.fooduca;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +15,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.fooduca.fooduca.Adapter.RecyclerViewComida;
+import com.fooduca.fooduca.POJO.Comida;
+import com.fooduca.fooduca.POJO.Restaurante;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    RecyclerView MiReVi;
+    List<Restaurante> restaurantes;
+    List<Comida> comidas;
+    RecyclerView.Adapter rvadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +54,28 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Parte del proyecto
+
+        MiReVi = findViewById(R.id.Recyclerview);
+        MiReVi.setLayoutManager(new GridLayoutManager(this,2));
+
+        comidas = new ArrayList<>();
+        comidas.add(new Comida("Hamburguesa","$3.00",R.drawable.comida));
+        comidas.add(new Comida("Pizza","$2.00",R.drawable.comida));
+        comidas.add(new Comida("Sandwich","$1.00",R.drawable.comida));
+        comidas.add(new Comida("Sopa","$2.00",R.drawable.comida));
+        comidas.add(new Comida("Taco","$2.00",R.drawable.comida));
+        comidas.add(new Comida("Chili","$3.00",R.drawable.comida));
+        comidas.add(new Comida("Burrito","$4.00",R.drawable.comida));
+        comidas.add(new Comida("Lasagna","$5.00",R.drawable.comida));
+        comidas.add(new Comida("Chimichanga","$1.00",R.drawable.comida));
+        comidas.add(new Comida("Tortilla","$0,25",R.drawable.comida));
+
+        rvadapter = new RecyclerViewComida(this, comidas);
+        MiReVi.setAdapter(rvadapter);
+        MiReVi.setHasFixedSize(true);
+
     }
 
     @Override

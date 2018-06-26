@@ -15,7 +15,7 @@ import com.fooduca.fooduca.R;
 
 import java.util.List;
 
-public class RecyclerViewComida {
+public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.MyViewHolder>{
     private List<Comida> comidas;
     private Context miContexto;
 
@@ -24,13 +24,13 @@ public class RecyclerViewComida {
         this.comidas = comidas;
     }
 
-    //@Override
+    @Override
     public int getItemCount(){
         return comidas.size();
     }
 
     @NonNull
-    //@Override
+    @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
         View view;
         LayoutInflater inflater = LayoutInflater.from(miContexto);
@@ -38,11 +38,11 @@ public class RecyclerViewComida {
         return new MyViewHolder(view);
     }
 
-    //@Override
+    @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
         holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
-        holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
         holder.Precio.setText(comidas.get(position).getPrecio());
+        holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
@@ -55,8 +55,8 @@ public class RecyclerViewComida {
             super(itemView);
 
             Nombre_comida = itemView.findViewById(R.id.txt_nombre_comida);
-            ComidaImg = itemView.findViewById(R.id.img_comida);
             Precio =itemView.findViewById(R.id.txt_precio);
+            ComidaImg = itemView.findViewById(R.id.img_comida);
             btn_fav = itemView.findViewById(R.id.imgbtn_fav);
         }
     }
