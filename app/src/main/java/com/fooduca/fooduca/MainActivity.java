@@ -1,5 +1,7 @@
 package com.fooduca.fooduca;
 
+import android.app.Fragment;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,11 +26,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     RecyclerView MiReVi;
     RecyclerView MiReVi2;
-    List<Restaurante> restaurantes;
+    List<Restaurante> restaurantes_proceres;
+    List<Restaurante> restaurantes_sultana;
     List<Comida> comidas;
     RecyclerView.Adapter rvadapter;
     RecyclerView.Adapter rvadapter2;
@@ -60,8 +63,8 @@ public class MainActivity extends AppCompatActivity
 
         //Parte del proyecto
 
-        MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
-        MiReVi.setLayoutManager(new GridLayoutManager(this,2));
+        //MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
+        //MiReVi.setLayoutManager(new GridLayoutManager(this,2));
 
         MiReVi2 = findViewById(R.id.Recyclerview_restaurantes_proceres);
         MiReVi2.setLayoutManager(new GridLayoutManager(this,2));
@@ -78,23 +81,28 @@ public class MainActivity extends AppCompatActivity
         comidas.add(new Comida("Chimichanga","$1.00",R.drawable.comida));
         comidas.add(new Comida("Tortilla","$0,25",R.drawable.comida));
 
-        restaurantes = new ArrayList<>();
-        restaurantes.add(new Restaurante("Pizza Hut",R.drawable.comida));
-        restaurantes.add(new Restaurante("Los Cebollines",R.drawable.comida));
-        restaurantes.add(new Restaurante("China Wok",R.drawable.comida));
-        restaurantes.add(new Restaurante("Pollo Campero",R.drawable.comida));
-        restaurantes.add(new Restaurante("Burguer King",R.drawable.comida));
-        restaurantes.add(new Restaurante("McDonald",R.drawable.comida));
-        restaurantes.add(new Restaurante("Starbucks",R.drawable.comida));
-        restaurantes.add(new Restaurante("Wendy's",R.drawable.comida));
+        restaurantes_proceres = new ArrayList<>();
+        restaurantes_proceres.add(new Restaurante("Pizza Hut",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("Los Cebollines",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("China Wok",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("Pollo Campero",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("Burguer King",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("McDonald",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("Starbucks",R.drawable.comida));
+        restaurantes_proceres.add(new Restaurante("Wendy's",R.drawable.comida));
 
-        rvadapter = new RecyclerViewComida(this, comidas);
+        restaurantes_sultana = new ArrayList<>();
+        restaurantes_sultana.add(new Restaurante("Wendy's",R.drawable.comida));
+        restaurantes_sultana.add(new Restaurante("Mister Donut",R.drawable.comida));
+
+        /*rvadapter = new RecyclerViewComida(this, comidas);
         MiReVi.setAdapter(rvadapter);
-        MiReVi.setHasFixedSize(true);
+        MiReVi.setHasFixedSize(true);*/
 
-        rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes);
+        rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes_sultana);
         MiReVi2.setAdapter(rvadapter2);
         MiReVi2.setHasFixedSize(true);
+
 
     }
 
@@ -137,7 +145,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -153,5 +161,6 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
 }
