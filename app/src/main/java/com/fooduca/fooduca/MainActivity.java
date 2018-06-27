@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity
         MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
         MiReVi.setLayoutManager(new GridLayoutManager(this,2));
 
-        MiReVi2 = findViewById(R.id.recyclerview_restaurantes_proceres);
-        MiReVi2.setLayoutManager(new GridLayoutManager(this,2));
+        //MiReVi2 = findViewById(R.id.recyclerview_restaurantes_proceres);
+        //MiReVi2.setLayoutManager(new GridLayoutManager(this,2));
 
         comidas = new ArrayList<>();
         comidas.add(new Comida("Hamburguesa","$3.00",R.drawable.comida));
@@ -114,9 +114,9 @@ public class MainActivity extends AppCompatActivity
         MiReVi.setAdapter(rvadapter);
         MiReVi.setHasFixedSize(true);
 
-        rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes);
+        /*rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes);
         MiReVi2.setAdapter(rvadapter2);
-        MiReVi2.setHasFixedSize(true);
+        MiReVi2.setHasFixedSize(true);*/
 
     }
 
