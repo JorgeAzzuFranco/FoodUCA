@@ -2,10 +2,13 @@ package com.fooduca.fooduca.POJO;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 
 @Entity(tableName = "COMIDA")
 public class Comida {
 
+    @PrimaryKey(autoGenerate = true)
+    private int idCom;
     @ColumnInfo(name = "nombre")
     private String nombre_comida;
     @ColumnInfo(name = "precio")
@@ -18,6 +21,14 @@ public class Comida {
         this.precio = precio;
         this.ComidaImg = ComidaImg;
 
+    }
+
+    public int getIdCom() {
+        return idCom;
+    }
+
+    public void setIdCom(int idCom) {
+        this.idCom = idCom;
     }
 
     public String getPrecio() {
