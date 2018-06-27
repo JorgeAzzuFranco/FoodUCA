@@ -3,6 +3,9 @@ package com.fooduca.fooduca;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +16,44 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.fooduca.fooduca.Adapter.RecyclerViewComida;
+import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
+import com.fooduca.fooduca.Fragmentos.MasRicosFragment;
+import com.fooduca.fooduca.Fragmentos.PeaFragment;
+import com.fooduca.fooduca.Fragmentos.ProceresFragment;
+import com.fooduca.fooduca.Fragmentos.RecomendacionFragment;
+import com.fooduca.fooduca.Fragmentos.SultanaFragment;
+import com.fooduca.fooduca.POJO.Comida;
+import com.fooduca.fooduca.POJO.Restaurante;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import com.fooduca.fooduca.Adapter.RecyclerViewComida;
+import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
+import com.fooduca.fooduca.POJO.Comida;
+import com.fooduca.fooduca.POJO.Restaurante;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        PeaFragment.OnNavigationItemSelectedListener,
+        ProceresFragment.OnNavigationItemSelectedListener,
+        SultanaFragment.OnNavigationItemSelectedListener,
+        RecomendacionFragment.OnNavigationItemSelectedListener,
+        MasRicosFragment.OnNavigationItemSelectedListener{
+
+    RecyclerView MiReVi;
+    RecyclerView MiReVi2;
+    List<Restaurante> restaurantes;
+    List<Comida> comidas;
+    RecyclerView.Adapter rvadapter;
+    RecyclerView.Adapter rvadapter2;
+    Fragment fragment = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +79,45 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Parte del proyecto
+
+        MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
+        MiReVi.setLayoutManager(new GridLayoutManager(this,2));
+
+        MiReVi2 = findViewById(R.id.recyclerview_restaurantes_proceres);
+        MiReVi2.setLayoutManager(new GridLayoutManager(this,2));
+
+        comidas = new ArrayList<>();
+        comidas.add(new Comida("Hamburguesa","$3.00",R.drawable.comida));
+        comidas.add(new Comida("Pizza","$2.00",R.drawable.comida));
+        comidas.add(new Comida("Sandwich","$1.00",R.drawable.comida));
+        comidas.add(new Comida("Sopa","$2.00",R.drawable.comida));
+        comidas.add(new Comida("Taco","$2.00",R.drawable.comida));
+        comidas.add(new Comida("Chili","$3.00",R.drawable.comida));
+        comidas.add(new Comida("Burrito","$4.00",R.drawable.comida));
+        comidas.add(new Comida("Lasagna","$5.00",R.drawable.comida));
+        comidas.add(new Comida("Chimichanga","$1.00",R.drawable.comida));
+        comidas.add(new Comida("Tortilla","$0,25",R.drawable.comida));
+
+        restaurantes = new ArrayList<>();
+        restaurantes.add(new Restaurante("Pizza Hut",R.drawable.comida));
+        restaurantes.add(new Restaurante("Los Cebollines",R.drawable.comida));
+        restaurantes.add(new Restaurante("China Wok",R.drawable.comida));
+        restaurantes.add(new Restaurante("Pollo Campero",R.drawable.comida));
+        restaurantes.add(new Restaurante("Burguer King",R.drawable.comida));
+        restaurantes.add(new Restaurante("McDonald",R.drawable.comida));
+        restaurantes.add(new Restaurante("Starbucks",R.drawable.comida));
+        restaurantes.add(new Restaurante("Wendy's",R.drawable.comida));
+
+        rvadapter = new RecyclerViewComida(this, comidas);
+        MiReVi.setAdapter(rvadapter);
+        MiReVi.setHasFixedSize(true);
+
+        rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes);
+        MiReVi2.setAdapter(rvadapter2);
+        MiReVi2.setHasFixedSize(true);
+
     }
 
     @Override
@@ -80,18 +158,29 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        boolean seleccionado = false;
+
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            fragment = new RecomendacionFragment();
+            seleccionado = true;
         } else if (id == R.id.nav_gallery) {
-
+            fragment = new PeaFragment();
+            seleccionado = true;
         } else if (id == R.id.nav_slideshow) {
-
+            fragment = new SultanaFragment();
+            seleccionado = true;
         } else if (id == R.id.nav_manage) {
-
+            fragment = new ProceresFragment();
+            seleccionado = true;
         } else if (id == R.id.nav_share) {
-
+            fragment = new MasRicosFragment();
+            seleccionado = true;
         } else if (id == R.id.nav_send) {
 
+        }
+
+        if(seleccionado) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenido,fragment).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

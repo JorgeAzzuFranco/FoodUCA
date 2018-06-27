@@ -9,12 +9,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fooduca.fooduca.MainActivity;
 import com.fooduca.fooduca.POJO.Restaurante;
 import com.fooduca.fooduca.R;
 
 import java.util.List;
 
-public class RecyclerViewRestaurantes {
+public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewRestaurantes.MyViewHolder>{
     private List<Restaurante> restaurantes;
     private Context miContexto2;
 
@@ -23,21 +24,21 @@ public class RecyclerViewRestaurantes {
         this.restaurantes = restaurantes;
     }
 
-    //@Override
+    @Override
     public int getItemCount(){
         return restaurantes.size();
     }
 
     @NonNull
-    //@Override
-    public RecyclerViewComida.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
         View view;
         LayoutInflater inflater = LayoutInflater.from(miContexto2);
         view = inflater.inflate(R.layout.cardview_restaurante, parent, false);
-        return new RecyclerViewComida.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
-    //@Override
+    @Override
     public void onBindViewHolder(@NonNull RecyclerViewRestaurantes.MyViewHolder holder, int position){
         holder.Nombre_restaurante.setText(restaurantes.get(position).getNombre_restaurante());
         holder.RestauranteImg.setImageResource(restaurantes.get(position).getRestauranteImg());
