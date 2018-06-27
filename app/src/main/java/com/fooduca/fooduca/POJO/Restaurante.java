@@ -1,7 +1,14 @@
 package com.fooduca.fooduca.POJO;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+
+@Entity(tableName = "RESTAURANTE")
 public class Restaurante {
+
+    @ColumnInfo(name = "nomRestaurante")
     private String nombre_restaurante;
+    @ColumnInfo(name = "restauranteImg")
     private int RestauranteImg;
 
     public Restaurante(String nombre_restaurante, int RestauranteImg) {
