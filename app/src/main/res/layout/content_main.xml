@@ -9,26 +9,12 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <ImageView
-        android:id="@+id/img_restaurante_individual"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Recyclerview_restaurantes_proceres"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:src="@drawable/restaurante"
-        android:foregroundGravity="center"
-        android:layout_marginTop="5dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/Recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:layout_margin="4dp">
-        </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_margin="4dp">
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

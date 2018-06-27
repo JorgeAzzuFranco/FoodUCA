@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
+import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
 import com.fooduca.fooduca.POJO.Comida;
 import com.fooduca.fooduca.POJO.Restaurante;
 
@@ -26,9 +27,11 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     RecyclerView MiReVi;
+    RecyclerView MiReVi2;
     List<Restaurante> restaurantes;
     List<Comida> comidas;
     RecyclerView.Adapter rvadapter;
+    RecyclerView.Adapter rvadapter2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +60,11 @@ public class MainActivity extends AppCompatActivity
 
         //Parte del proyecto
 
-        MiReVi = findViewById(R.id.Recyclerview);
+        MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
         MiReVi.setLayoutManager(new GridLayoutManager(this,2));
+
+        MiReVi2 = findViewById(R.id.Recyclerview_restaurantes_proceres);
+        MiReVi2.setLayoutManager(new GridLayoutManager(this,2));
 
         comidas = new ArrayList<>();
         comidas.add(new Comida("Hamburguesa","$3.00",R.drawable.comida));
@@ -72,9 +78,23 @@ public class MainActivity extends AppCompatActivity
         comidas.add(new Comida("Chimichanga","$1.00",R.drawable.comida));
         comidas.add(new Comida("Tortilla","$0,25",R.drawable.comida));
 
+        restaurantes = new ArrayList<>();
+        restaurantes.add(new Restaurante("Pizza Hut",R.drawable.comida));
+        restaurantes.add(new Restaurante("Los Cebollines",R.drawable.comida));
+        restaurantes.add(new Restaurante("China Wok",R.drawable.comida));
+        restaurantes.add(new Restaurante("Pollo Campero",R.drawable.comida));
+        restaurantes.add(new Restaurante("Burguer King",R.drawable.comida));
+        restaurantes.add(new Restaurante("McDonald",R.drawable.comida));
+        restaurantes.add(new Restaurante("Starbucks",R.drawable.comida));
+        restaurantes.add(new Restaurante("Wendy's",R.drawable.comida));
+
         rvadapter = new RecyclerViewComida(this, comidas);
         MiReVi.setAdapter(rvadapter);
         MiReVi.setHasFixedSize(true);
+
+        rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes);
+        MiReVi2.setAdapter(rvadapter2);
+        MiReVi2.setHasFixedSize(true);
 
     }
 
