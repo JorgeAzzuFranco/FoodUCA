@@ -6,6 +6,7 @@ package com.fooduca.fooduca.POJO;
 //@Entity(tableName = "COMIDA")
 public class Comida {
 
+    private String nombre_restaurante;
     //@ColumnInfo(name = "nombre")
     private String nombre_comida;
     //@ColumnInfo(name = "precio")
@@ -13,11 +14,20 @@ public class Comida {
     //@ColumnInfo(name = "comidaImg")
     private int ComidaImg;
 
-    public Comida(String nombre_comida, String precio,int ComidaImg) {
+    public Comida(String nombre_restaurante, String nombre_comida, String precio,int ComidaImg) {
+        this.nombre_restaurante = nombre_restaurante;
         this.nombre_comida = nombre_comida;
         this.precio = precio;
         this.ComidaImg = ComidaImg;
 
+    }
+
+    public void setNombre_restaurante(String nombre_restaurante) {
+        this.nombre_restaurante = nombre_restaurante;
+    }
+
+    public String getNombre_restaurante() {
+        return nombre_restaurante;
     }
 
     public String getPrecio() {
