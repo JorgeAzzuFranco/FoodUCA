@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".Fragmentos.ProceresFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceres fragment"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Recyclerview_restaurantes_proceres"
         android:layout_width="match_parent"
