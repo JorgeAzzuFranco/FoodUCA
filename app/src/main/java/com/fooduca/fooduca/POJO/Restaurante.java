@@ -39,5 +39,13 @@ public class Restaurante {
     public void setRestauranteImg(int RestauranteImg) {
         RestauranteImg = RestauranteImg;
     }
+
+    public String getWeb() {
+        return web;
+    }
+
+    public void setWeb(String web) {
+        this.web = web;
+    }
 }
 

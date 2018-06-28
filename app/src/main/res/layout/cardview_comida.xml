@@ -36,6 +36,11 @@
                 android:text="Precio: $0.00"
                 android:textColor="#000"
                 android:textSize="20dp" />
+        <TextView
+            android:id="@+id/txt_nombre_restaurante"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Nombre_Restaurante"/>
         </LinearLayout>
     <ImageButton
         android:id="@+id/imgbtn_fav"

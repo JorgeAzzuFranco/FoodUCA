@@ -41,7 +41,7 @@ public class PeaFragment extends Fragment {
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
         res = new ArrayList<>();
-        res.add(new Restaurante("Pepper Jack",R.drawable.logo_pepperjack));
+        res.add(new Restaurante("Pepper Jack",R.drawable.logo_pepperjack,null));
         res.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food));
         res.add(new Restaurante("Delicias do Brazil",R.drawable.logo_delicias_do_brasil));
         res.add(new Restaurante("La chinita",R.drawable.comida));

@@ -28,6 +28,11 @@
             android:text="Nombre"
             android:textColor="#000"
             android:textSize="20dp" />
+        <TextView
+            android:id="@+id/txt_URL_restaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL"/>
 
     </LinearLayout>
 

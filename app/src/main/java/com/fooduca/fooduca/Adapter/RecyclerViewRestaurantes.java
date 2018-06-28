@@ -1,6 +1,8 @@
 package com.fooduca.fooduca.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -39,20 +41,37 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewRestaurantes.MyViewHolder holder, int position){
+    public void onBindViewHolder(@NonNull final RecyclerViewRestaurantes.MyViewHolder holder, final int position){
         holder.Nombre_restaurante.setText(restaurantes.get(position).getNombre_restaurante());
         holder.RestauranteImg.setImageResource(restaurantes.get(position).getRestauranteImg());
+        holder.url.setText(restaurantes.get(position).getWeb());
+        holder.RestauranteImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String obtenerurl = restaurantes.get(position).getWeb();
+                if (obtenerurl != null) {
+                    //String obtenerurl = restaurantes.get(position).getWeb();
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(obtenerurl));
+                    // intent.setData(Uri.parse("https://www.pizzahut.com.sv/"));
+                    miContexto2.startActivity(intent);
+
+                }
+            }
+        });
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView Nombre_restaurante;
         ImageView RestauranteImg;
+        TextView url;
 
         public MyViewHolder(View itemView){
             super(itemView);
 
             Nombre_restaurante = itemView.findViewById(R.id.txt_nombre_restaurante);
             RestauranteImg = itemView.findViewById(R.id.img_restaurante);
+            url = itemView.findViewById(R.id.txt_URL_restaurante);
         }
     }
 }

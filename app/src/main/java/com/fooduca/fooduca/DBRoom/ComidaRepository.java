@@ -16,10 +16,10 @@ public class ComidaRepository {
     private LiveData<Double> cant;
 
     ComidaRepository(Application application) {
-//        ComidaRoomDatabase db = ComidaRoomDatabase.getDatabase(application);
-//        comidaDAO = db.comidaDAO();
-//        mAllComida = comidaDAO.getAllComida();
-//        cant = comidaDAO.getCantComida();
+        ComidaRoomDatabase db = ComidaRoomDatabase.getDatabase(application);
+        comidaDAO = db.comidaDAO();
+        mAllComida = comidaDAO.getAllComida();
+        cant = comidaDAO.getCantComida();
     }
 
     LiveData<List<Comida>> getmAllComida(){
@@ -42,7 +42,7 @@ public class ComidaRepository {
 
         @Override
         protected Void doInBackground(Comida... comidas) {
-//            mAsyncTaskDao.insert(comidas[0]);
+            mAsyncTaskDao.insert(comidas[0]);
             return null;
         }
     }
