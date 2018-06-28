@@ -39,13 +39,7 @@ public class MainActivity extends AppCompatActivity
         RecomendacionFragment.OnNavigationItemSelectedListener,
         MasRicosFragment.OnNavigationItemSelectedListener{
 
-    RecyclerView MiReVi;
-    RecyclerView MiReVi2;
-    List<Restaurante> restaurantes;
-    List<Restaurante> rpro;
     List<Comida> comidas;
-    RecyclerView.Adapter rvadapter;
-    RecyclerView.Adapter rvadapter2;
     Fragment fragment = null;
 
 
@@ -77,16 +71,16 @@ public class MainActivity extends AppCompatActivity
         //Parte del proyecto
 
         comidas = new ArrayList<>();
-        comidas.add(new Comida("Hamburguesa","$3.00",R.drawable.comida));
-        comidas.add(new Comida("Pizza","$2.00",R.drawable.comida));
-        comidas.add(new Comida("Sandwich","$1.00",R.drawable.comida));
-        comidas.add(new Comida("Sopa","$2.00",R.drawable.comida));
-        comidas.add(new Comida("Taco","$2.00",R.drawable.comida));
-        comidas.add(new Comida("Chili","$3.00",R.drawable.comida));
-        comidas.add(new Comida("Burrito","$4.00",R.drawable.comida));
-        comidas.add(new Comida("Lasagna","$5.00",R.drawable.comida));
-        comidas.add(new Comida("Chimichanga","$1.00",R.drawable.comida));
-        comidas.add(new Comida("Tortilla","$0,25",R.drawable.comida));
+        comidas.add(new Comida("","Hamburguesa","$3.00",R.drawable.comida));
+        comidas.add(new Comida("","Pizza","$2.00",R.drawable.comida));
+        comidas.add(new Comida("","Sandwich","$1.00",R.drawable.comida));
+        comidas.add(new Comida("","Sopa","$2.00",R.drawable.comida));
+        comidas.add(new Comida("","Taco","$2.00",R.drawable.comida));
+        comidas.add(new Comida("","Chili","$3.00",R.drawable.comida));
+        comidas.add(new Comida("","Burrito","$4.00",R.drawable.comida));
+        comidas.add(new Comida("","Lasagna","$5.00",R.drawable.comida));
+        comidas.add(new Comida("","Chimichanga","$1.00",R.drawable.comida));
+        comidas.add(new Comida("","Tortilla","$0,25",R.drawable.comida));
     }
 
     @Override
