@@ -1,6 +1,8 @@
 package com.fooduca.fooduca.Fragmentos;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -8,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
 import com.fooduca.fooduca.POJO.Restaurante;
@@ -25,7 +28,7 @@ public class ProceresFragment extends Fragment {
     public ProceresFragment() {
         // Required empty public constructor
     }
-
+    ImageView imgview;
     View view;
     RecyclerView recycler;
     GridLayoutManager glm;
@@ -44,6 +47,7 @@ public class ProceresFragment extends Fragment {
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
         res = new ArrayList<>();
+        //res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut,"Pizzahut.com"));
         res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut));
         res.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines));
         res.add(new Restaurante("China Wok",R.drawable.logo_china_wok));
@@ -56,7 +60,16 @@ public class ProceresFragment extends Fragment {
 
         rvadapter = new RecyclerViewRestaurantes(getContext(),res);
         recycler.setAdapter(rvadapter);
-
+        //intentando ir a pag al darle a la img
+//        imgview = view.findViewById(R.id.img_restaurante);
+//        imgview.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Uri uri = Uri.parse("https://www.pizzahut.com.sv/");
+//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                startActivity(intent);
+//            }
+//        });
         return view;
     }
 

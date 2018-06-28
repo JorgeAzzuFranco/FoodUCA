@@ -10,11 +10,17 @@ public class Restaurante {
     private String nombre_restaurante;
     //@ColumnInfo(name = "restauranteImg")
     private int RestauranteImg;
+    private String web;
 
     public Restaurante(String nombre_restaurante, int RestauranteImg) {
         this.nombre_restaurante = nombre_restaurante;
         this.RestauranteImg = RestauranteImg;
+    }
 
+    public Restaurante(String nombre_restaurante, int restauranteImg, String web) {
+        this.nombre_restaurante = nombre_restaurante;
+        RestauranteImg = restauranteImg;
+        this.web = web;
     }
 
     public String getNombre_restaurante() {
