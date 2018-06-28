@@ -47,15 +47,22 @@ public class ProceresFragment extends Fragment {
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
         res = new ArrayList<>();
-        //res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut,"Pizzahut.com"));
-        res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut));
-        res.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines));
-        res.add(new Restaurante("China Wok",R.drawable.logo_china_wok));
-        res.add(new Restaurante("Pollo Campero",R.drawable.logo_pollo_campero));
-        res.add(new Restaurante("Burguer King",R.drawable.logo_burger_king));
-        res.add(new Restaurante("McDonald",R.drawable.logo_mcdonalds));
-        res.add(new Restaurante("Starbucks",R.drawable.logo_starbucks));
-        res.add(new Restaurante("Wendy's",R.drawable.logo_wendys));
+        res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut,"https://www.pizzahut.com.sv/"));
+        res.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines, "http://www.cebollines.com/"));
+        res.add(new Restaurante("China Wok",R.drawable.logo_china_wok, "http://www.chinawok.com.sv/"));
+        res.add(new Restaurante("Pollo Campero",R.drawable.logo_pollo_campero,"https://www.campero.com/sv"));
+        res.add(new Restaurante("Burguer King",R.drawable.logo_burger_king, "https://www.bk.com/international"));
+        res.add(new Restaurante("McDonald",R.drawable.logo_mcdonalds,"https://www.mcdonalds.com/us/es-us.html"));
+        res.add(new Restaurante("Starbucks",R.drawable.logo_starbucks,"https://www.starbucks.com/"));
+        res.add(new Restaurante("Wendy's",R.drawable.logo_wendys,"https://www.wendyselsalvador.com/"));
+//        res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut));
+//        res.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines));
+//        res.add(new Restaurante("China Wok",R.drawable.logo_china_wok));
+//        res.add(new Restaurante("Pollo Campero",R.drawable.logo_pollo_campero));
+//        res.add(new Restaurante("Burguer King",R.drawable.logo_burger_king));
+//        res.add(new Restaurante("McDonald",R.drawable.logo_mcdonalds));
+//        res.add(new Restaurante("Starbucks",R.drawable.logo_starbucks));
+//        res.add(new Restaurante("Wendy's",R.drawable.logo_wendys));
         recycler.setLayoutManager(glm);
 
         rvadapter = new RecyclerViewRestaurantes(getContext(),res);
