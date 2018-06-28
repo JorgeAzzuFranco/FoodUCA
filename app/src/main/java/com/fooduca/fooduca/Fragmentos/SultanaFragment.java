@@ -42,8 +42,8 @@ public class SultanaFragment extends Fragment {
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
         res = new ArrayList<>();
-        res.add(new Restaurante("Mister Donut",R.drawable.comida));
-        res.add(new Restaurante("Wendy's",R.drawable.comida));
+        res.add(new Restaurante("Mister Donut",R.drawable.logo_mister_donut));
+        res.add(new Restaurante("Wendy's",R.drawable.logo_wendys));
 
         recycler.setLayoutManager(glm);
 

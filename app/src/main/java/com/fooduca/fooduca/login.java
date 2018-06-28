@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class login extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class login extends AppCompatActivity {
             cont = 0;
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }
