@@ -30,13 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import com.fooduca.fooduca.Adapter.RecyclerViewComida;
-import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
-import com.fooduca.fooduca.POJO.Comida;
-import com.fooduca.fooduca.POJO.Restaurante;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -49,6 +42,7 @@ public class MainActivity extends AppCompatActivity
     RecyclerView MiReVi;
     RecyclerView MiReVi2;
     List<Restaurante> restaurantes;
+    List<Restaurante> rpro;
     List<Comida> comidas;
     RecyclerView.Adapter rvadapter;
     RecyclerView.Adapter rvadapter2;
@@ -82,12 +76,6 @@ public class MainActivity extends AppCompatActivity
 
         //Parte del proyecto
 
-        MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
-        MiReVi.setLayoutManager(new GridLayoutManager(this,2));
-
-        //MiReVi2 = findViewById(R.id.recyclerview_restaurantes_proceres);
-        //MiReVi2.setLayoutManager(new GridLayoutManager(this,2));
-
         comidas = new ArrayList<>();
         comidas.add(new Comida("Hamburguesa","$3.00",R.drawable.comida));
         comidas.add(new Comida("Pizza","$2.00",R.drawable.comida));
@@ -99,25 +87,6 @@ public class MainActivity extends AppCompatActivity
         comidas.add(new Comida("Lasagna","$5.00",R.drawable.comida));
         comidas.add(new Comida("Chimichanga","$1.00",R.drawable.comida));
         comidas.add(new Comida("Tortilla","$0,25",R.drawable.comida));
-
-        restaurantes = new ArrayList<>();
-        restaurantes.add(new Restaurante("Pizza Hut",R.drawable.comida));
-        restaurantes.add(new Restaurante("Los Cebollines",R.drawable.comida));
-        restaurantes.add(new Restaurante("China Wok",R.drawable.comida));
-        restaurantes.add(new Restaurante("Pollo Campero",R.drawable.comida));
-        restaurantes.add(new Restaurante("Burguer King",R.drawable.comida));
-        restaurantes.add(new Restaurante("McDonald",R.drawable.comida));
-        restaurantes.add(new Restaurante("Starbucks",R.drawable.comida));
-        restaurantes.add(new Restaurante("Wendy's",R.drawable.comida));
-
-        rvadapter = new RecyclerViewComida(this, comidas);
-        MiReVi.setAdapter(rvadapter);
-        MiReVi.setHasFixedSize(true);
-
-        /*rvadapter2 = new RecyclerViewRestaurantes(this, restaurantes);
-        MiReVi2.setAdapter(rvadapter2);
-        MiReVi2.setHasFixedSize(true);*/
-
     }
 
     @Override
@@ -172,10 +141,14 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
             fragment = new ProceresFragment();
             seleccionado = true;
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_sara) {
             fragment = new MasRicosFragment();
             seleccionado = true;
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_marlene) {
+
+        }else if (id == R.id.nav_jorge) {
+
+        }else if (id == R.id.nav_miguel) {
 
         }
 

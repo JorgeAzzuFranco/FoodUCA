@@ -22,16 +22,24 @@
             android:title="Los Próceres" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Conoce a los creadores">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_sara"
+                android:icon="@drawable/estrella"
+                android:title="Sara Romero" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_marlene"
+                android:icon="@drawable/estrella"
+                android:title="Marlene Barahona" />
+            <item
+                android:id="@+id/nav_jorge"
+                android:icon="@drawable/estrella"
+                android:title="Jorge Franco" />
+            <item
+                android:id="@+id/nav_miguel"
+                android:icon="@drawable/estrella"
+                android:title="Miguel González" />
         </menu>
     </item>
 
