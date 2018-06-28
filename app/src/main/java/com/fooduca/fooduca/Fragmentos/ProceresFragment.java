@@ -44,14 +44,14 @@ public class ProceresFragment extends Fragment {
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
         res = new ArrayList<>();
-        res.add(new Restaurante("Pizza Hut",R.drawable.comida));
-        res.add(new Restaurante("Los Cebollines",R.drawable.comida));
-        res.add(new Restaurante("China Wok",R.drawable.comida));
-        res.add(new Restaurante("Pollo Campero",R.drawable.comida));
-        res.add(new Restaurante("Burguer King",R.drawable.comida));
-        res.add(new Restaurante("McDonald",R.drawable.comida));
-        res.add(new Restaurante("Starbucks",R.drawable.comida));
-        res.add(new Restaurante("Wendy's",R.drawable.comida));
+        res.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut));
+        res.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines));
+        res.add(new Restaurante("China Wok",R.drawable.logo_china_wok));
+        res.add(new Restaurante("Pollo Campero",R.drawable.logo_pollo_campero));
+        res.add(new Restaurante("Burguer King",R.drawable.logo_burger_king));
+        res.add(new Restaurante("McDonald",R.drawable.logo_mcdonalds));
+        res.add(new Restaurante("Starbucks",R.drawable.logo_starbucks));
+        res.add(new Restaurante("Wendy's",R.drawable.logo_wendys));
         recycler.setLayoutManager(glm);
 
         rvadapter = new RecyclerViewRestaurantes(getContext(),res);
