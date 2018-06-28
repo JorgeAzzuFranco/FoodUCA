@@ -15,7 +15,7 @@ public class ComidaRepository {
     private LiveData<List<Comida>> mAllComida;
     private LiveData<Double> cant;
 
-    ComidaRepository(Application application) {
+    /*ComidaRepository(Application application) {
         ComidaRoomDatabase db = ComidaRoomDatabase.getDatabase(application);
         comidaDAO = db.comidaDAO();
         mAllComida = comidaDAO.getAllComida();
@@ -45,7 +45,7 @@ public class ComidaRepository {
             mAsyncTaskDao.insert(comidas[0]);
             return null;
         }
-    }
+    }*/
 
 
 

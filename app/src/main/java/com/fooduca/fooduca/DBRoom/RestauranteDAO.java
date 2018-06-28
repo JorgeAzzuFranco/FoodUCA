@@ -10,5 +10,5 @@ import com.fooduca.fooduca.POJO.Restaurante;
 public interface RestauranteDAO {
 
     //@Query("SELECT * FROM RESTAURANTE")
-    LiveData<Restaurante> getAllRestaurantes();
+//    LiveData<Restaurante> getAllRestaurantes();
 }

@@ -10,5 +10,5 @@ import com.fooduca.fooduca.POJO.Comida;
 public interface ComidaDAO {
 
     //@Query("SELECT * FROM COMIDA")
-    LiveData<Comida> getAllComida();
+//    LiveData<Comida> getAllComida();
 }

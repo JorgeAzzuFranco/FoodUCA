@@ -11,7 +11,11 @@ import java.util.List;
 
 public class ComidaViewModel extends AndroidViewModel {
 
-    private ComidaRepository mComidaRepository;
+    public ComidaViewModel(@NonNull Application application) {
+        super(application);
+    }
+
+    /*private ComidaRepository mComidaRepository;
     private LiveData<List<Comida>> mAllComida;
     private LiveData<Double> cant;
 
@@ -23,6 +27,6 @@ public class ComidaViewModel extends AndroidViewModel {
     }
 
     LiveData<List<Comida>> getmAllComida(){return mAllComida;}
-    public void insert(Comida comida){mComidaRepository.insert(comida);}
+    public void insert(Comida comida){mComidaRepository.insert(comida);}*/
 
 }
