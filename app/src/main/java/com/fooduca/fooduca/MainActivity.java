@@ -17,21 +17,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
-import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
 import com.fooduca.fooduca.Fragmentos.MasRicosFragment;
 import com.fooduca.fooduca.Fragmentos.PeaFragment;
 import com.fooduca.fooduca.Fragmentos.ProceresFragment;
 import com.fooduca.fooduca.Fragmentos.RecomendacionFragment;
 import com.fooduca.fooduca.Fragmentos.SultanaFragment;
-import com.fooduca.fooduca.POJO.Comida;
-import com.fooduca.fooduca.POJO.Restaurante;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
-import com.fooduca.fooduca.Adapter.RecyclerViewComida;
-import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
 import com.fooduca.fooduca.POJO.Comida;
 import com.fooduca.fooduca.POJO.Restaurante;
 
@@ -82,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
         //Parte del proyecto
 
-        MiReVi = findViewById(R.id.Recyclerview_restaurante_individual);
+        MiReVi = findViewById(R.id.myrv);
         MiReVi.setLayoutManager(new GridLayoutManager(this,2));
 
         //MiReVi2 = findViewById(R.id.recyclerview_restaurantes_proceres);

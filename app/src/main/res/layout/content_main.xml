@@ -24,7 +24,7 @@
         android:layout_marginTop="120dp">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/Recyclerview_restaurante_individual"
+            android:id="@+id/myrv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"
