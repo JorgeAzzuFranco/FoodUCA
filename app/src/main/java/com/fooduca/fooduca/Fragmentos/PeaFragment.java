@@ -43,12 +43,12 @@ public class PeaFragment extends Fragment {
         res = new ArrayList<>();
         res.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,null));
         res.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food));
-        res.add(new Restaurante("Delicias do Brazil",R.drawable.logo_delicias_do_brasil));
+        res.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil));
         res.add(new Restaurante("La chinita",R.drawable.comida));
         res.add(new Restaurante("Loreto's",R.drawable.logo_loretos));
         res.add(new Restaurante("Jugolandia",R.drawable.comida));
-        res.add(new Restaurante("Otro 1",R.drawable.comida));
-        res.add(new Restaurante("Otro 2",R.drawable.comida));
+        res.add(new Restaurante("Quisitos",R.drawable.comida));
+        res.add(new Restaurante("La casita",R.drawable.comida));
         recycler.setLayoutManager(glm);
 
         rvadapter = new RecyclerViewRestaurantes(getContext(),res);
