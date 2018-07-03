@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
 import com.fooduca.fooduca.DBRoom.ComidaViewModel;
@@ -41,18 +42,28 @@ public class ListaComidaActivity extends AppCompatActivity {
         btn_fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(datos.getString("fb"));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                String obtenerfb = datos.getString("fb");
+                if (obtenerfb != null) {
+                    Uri uri = Uri.parse(obtenerfb);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(), "Nel prro, no tienen fb",Toast.LENGTH_LONG).show();
+                }
             }
         });
         btn_ig = findViewById(R.id.btn_ig);
         btn_ig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(datos.getString("ig"));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                String obtenerig = datos.getString("ig");
+                if (obtenerig != null) {
+                    Uri uri = Uri.parse(obtenerig);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(), "Nel prro, no tienen ig",Toast.LENGTH_LONG).show();
+                }
             }
         });
         rv = findViewById(R.id.myrv);
