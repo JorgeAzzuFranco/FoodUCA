@@ -30,29 +30,27 @@ public class ListaComidaActivity extends AppCompatActivity {
     List<Comida> comidas;
     RecyclerViewComida comidaAdapter;
     ImageView btn_fb;
+    ImageView btn_ig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cardview_restaurante_individual);
-
+        final Bundle datos = this.getIntent().getExtras();
         btn_fb = findViewById(R.id.btn_fb);
         btn_fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                holder.url.setText(restaurantes.get(position).getWeb());
-//                holder.RestauranteImg.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        String obtenerurl = restaurantes.get(position).getWeb();
-//                        if (obtenerurl != null) {
-//                            Intent intent = new Intent(Intent.ACTION_VIEW);
-//                            intent.setData(Uri.parse(obtenerurl));
-//                            startActivity(intent);
-//                        }
-//                    }
-//                });
-                Uri uri = Uri.parse("https://www.facebook.com./");
+                Uri uri = Uri.parse(datos.getString("fb"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+        btn_ig = findViewById(R.id.btn_ig);
+        btn_ig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(datos.getString("ig"));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

@@ -41,13 +41,13 @@ public class PeaFragment extends Fragment {
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
         res = new ArrayList<>();
-        //res.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,null));
-        //res.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food));
-        res.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://github.com/JorgeAzzuFranco/FoodUCA","https://github.com/JorgeAzzuFranco/"));
-        res.add(new Restaurante("La chinita",R.drawable.comida));
-        res.add(new Restaurante("Loreto's",R.drawable.logo_loretos));
-        res.add(new Restaurante("Jugolandia",R.drawable.comida));
-        res.add(new Restaurante("Quisitos",R.drawable.comida));
+        res.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", null));
+        res.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null));
+        res.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null));
+        res.add(new Restaurante("La chinita",R.drawable.comida, "https://www.facebook.com/La-Chinita-374421906396594/",null));
+        res.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/",null));
+        res.add(new Restaurante("Jugolandia",R.drawable.comida, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null));
+        res.add(new Restaurante("Kissitos",R.drawable.comida,"https://www.facebook.com/kissitos/",null));
         res.add(new Restaurante("La casita",R.drawable.comida));
         recycler.setLayoutManager(glm);
 

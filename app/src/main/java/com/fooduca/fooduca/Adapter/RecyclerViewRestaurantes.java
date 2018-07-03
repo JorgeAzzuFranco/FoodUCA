@@ -61,6 +61,8 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
 //                    miContexto2.startActivity(intent);
                     Intent intent = new Intent(v.getContext(), ListaComidaActivity.class);
                     intent.putExtra("com", restaurantes.get(position).getNombre_restaurante());
+                    intent.putExtra("fb", restaurantes.get(position).getFb());
+                    intent.putExtra("ig", restaurantes.get(position).getIg());
                     miContexto2.startActivity(intent);
                 }
             }
