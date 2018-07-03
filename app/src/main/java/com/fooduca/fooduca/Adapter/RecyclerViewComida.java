@@ -19,14 +19,21 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
     private List<Comida> comidas;
     private Context miContexto;
 
-    public RecyclerViewComida(Context miContexto,List<Comida> comidas){
+
+
+    public RecyclerViewComida(Context miContexto, List<Comida> comida){
         this.miContexto = miContexto;
-        this.comidas = comidas;
+        this.comidas = comida;
     }
 
     @Override
     public int getItemCount(){
-        return comidas.size();
+        if (comidas != null){
+            return comidas.size();
+        }
+        else{
+            return 0;
+        }
     }
 
     @NonNull
@@ -40,10 +47,18 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
-        holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
-        holder.Precio.setText(comidas.get(position).getPrecio());
-        holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
-        holder.Nombre_restaurante.setText(comidas.get(position).getNombre_restaurante());
+
+        if(comidas != null){
+            Comida current = comidas.get(position);
+            holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
+            holder.Precio.setText(comidas.get(position).getPrecio());
+            holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
+            holder.Nombre_restaurante.setText(comidas.get(position).getNombre_restaurante());
+        }
+        else{
+            holder.Nombre_comida.setText("No hay comida");
+        }
+
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

@@ -19,10 +19,10 @@ public class login extends AppCompatActivity {
         cargando.setImageResource(R.drawable.cargando);
 
         int cont = 0;
-        while(cont != 1){
+        while(cont != 1000000000){
             cont = cont +1;
         }
-        if (cont == 1){
+        if (cont == 1000000000){
             cont = 0;
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
