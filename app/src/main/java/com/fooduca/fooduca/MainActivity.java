@@ -1,13 +1,16 @@
 package com.fooduca.fooduca;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -44,6 +47,33 @@ public class MainActivity extends AppCompatActivity
     List<Comida> comidas;
     Fragment fragment = null;
 
+
+    //ESTO DA EL MENSAJE PARA QUE NO SE SALGA DE UN SOLO DEL NAVIGATION DRAWER
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+
+            new AlertDialog.Builder(this)
+                    .setIcon(R.drawable.bye)
+                    .setTitle(" ¿Te vas tan pronto?")
+                    .setMessage("Aun tienes muchos platillos por probar")
+                    .setNegativeButton("VOLVER", null)// sin listener
+                    .setPositiveButton("SALIR", new DialogInterface.OnClickListener() {// un listener que al pulsar, cierre la aplicacion
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                    // Salir
+                            MainActivity.this.finish();
+                        }
+                    })
+                    .show();
+
+        // Si el listener devuelve true, significa que el evento esta procesado, y nadie debe hacer nada mas
+            return true;
+        }
+        // para las demas cosas, se reenvia el evento al listener habitual
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
