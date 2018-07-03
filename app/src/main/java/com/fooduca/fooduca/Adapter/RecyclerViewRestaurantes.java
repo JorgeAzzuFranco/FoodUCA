@@ -49,15 +49,16 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
             @Override
             public void onClick(View v) {
                 String obtenerurl = restaurantes.get(position).getWeb();
+                String obtenerfb = restaurantes.get(position).getFb();
                 if (obtenerurl != null) {
-                    //String obtenerurl = restaurantes.get(position).getWeb();
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse(obtenerurl));
-                    // intent.setData(Uri.parse("https://www.pizzahut.com.sv/"));
                     miContexto2.startActivity(intent);
-
                 }
                 else{
+//                    Intent intent = new Intent(Intent.ACTION_VIEW);
+//                    intent.setData(Uri.parse(obtenerfb));
+//                    miContexto2.startActivity(intent);
                     Intent intent = new Intent(v.getContext(), ListaComidaActivity.class);
                     intent.putExtra("com", restaurantes.get(position).getNombre_restaurante());
                     miContexto2.startActivity(intent);
