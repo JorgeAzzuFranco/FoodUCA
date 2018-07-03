@@ -15,12 +15,22 @@ public class Restaurante {
     private int RestauranteImg;
 //    @ColumnInfo(name = "web")
     private String web;
-
+    private String fb;
+    private String ig;
+    //Antiguo para Pea
     public Restaurante(String nombre_restaurante, int RestauranteImg) {
         this.nombre_restaurante = nombre_restaurante;
         this.RestauranteImg = RestauranteImg;
     }
-
+    //Nuevo para Pea (con fb e ig)
+    public Restaurante(String nombre_restaurante, int restauranteImg, String fb, String ig) {
+        this.idRes = idRes;
+        this.nombre_restaurante = nombre_restaurante;
+        RestauranteImg = restauranteImg;
+        this.fb = fb;
+        this.ig = ig;
+    }
+    //Para Sultana y Proceres (con pag web)
     public Restaurante(String nombre_restaurante, int restauranteImg, String web) {
         this.nombre_restaurante = nombre_restaurante;
         RestauranteImg = restauranteImg;
@@ -39,10 +49,7 @@ public class Restaurante {
         return nombre_restaurante;
     }
 
-    public void setNombre_restaurante(String nombre_restaurante) {
-
-        this.nombre_restaurante = nombre_restaurante;
-    }
+    public void setNombre_restaurante(String nombre_restaurante) { this.nombre_restaurante = nombre_restaurante; }
 
     public int getRestauranteImg() {
         return RestauranteImg;
@@ -59,5 +66,13 @@ public class Restaurante {
     public void setWeb(String web) {
         this.web = web;
     }
+
+    public String getFb() { return fb; }
+
+    public void setFb(String fb) { this.fb = fb; }
+
+    public String getIg() { return ig; }
+
+    public void setIg(String ig) { this.ig = ig; }
 }
 
