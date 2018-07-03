@@ -1,15 +1,19 @@
 package com.fooduca.fooduca.POJO;
 
-//import android.arch.persistence.room.ColumnInfo;
-//import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 
 //@Entity(tableName = "RESTAURANTE")
 public class Restaurante {
 
-    //@ColumnInfo(name = "nomRestaurante")
+//    @PrimaryKey(autoGenerate = true)
+    private int idRes;
+//    @ColumnInfo(name = "nomRestaurante")
     private String nombre_restaurante;
-    //@ColumnInfo(name = "restauranteImg")
+//    @ColumnInfo(name = "restauranteImg")
     private int RestauranteImg;
+//    @ColumnInfo(name = "web")
     private String web;
 
     public Restaurante(String nombre_restaurante, int RestauranteImg) {
@@ -21,6 +25,14 @@ public class Restaurante {
         this.nombre_restaurante = nombre_restaurante;
         RestauranteImg = restauranteImg;
         this.web = web;
+    }
+
+    public int getIdRes() {
+        return idRes;
+    }
+
+    public void setIdRes(int idRes) {
+        this.idRes = idRes;
     }
 
     public String getNombre_restaurante() {

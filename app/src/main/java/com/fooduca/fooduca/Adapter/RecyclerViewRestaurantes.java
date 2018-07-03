@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fooduca.fooduca.MainActivity;
+import com.fooduca.fooduca.ListaComidaActivity;
 import com.fooduca.fooduca.POJO.Restaurante;
 import com.fooduca.fooduca.R;
 
@@ -56,6 +56,11 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
                     // intent.setData(Uri.parse("https://www.pizzahut.com.sv/"));
                     miContexto2.startActivity(intent);
 
+                }
+                else{
+                    Intent intent = new Intent(v.getContext(), ListaComidaActivity.class);
+                    intent.putExtra("com", restaurantes.get(position).getNombre_restaurante());
+                    miContexto2.startActivity(intent);
                 }
             }
         });
