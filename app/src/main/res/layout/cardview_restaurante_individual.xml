@@ -26,13 +26,13 @@
             <ImageView
                 android:layout_width="55dp"
                 android:layout_height="50dp"
-                android:src="@drawable/btn_fb"
+                android:src="@drawable/comida"
                 android:scaleType="fitXY"
                 android:layout_margin="2dp"/>
             <ImageView
                 android:layout_width="55dp"
                 android:layout_height="50dp"
-                android:src="@drawable/btn_ig"
+                android:src="@drawable/comida"
                 android:scaleType="fitXY"
                 android:layout_margin="2dp"/>
         </LinearLayout>
