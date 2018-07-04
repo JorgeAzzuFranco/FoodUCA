@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +48,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/myrv"
@@ -53,5 +59,51 @@
             android:layout_margin="4dp">
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
-
 </LinearLayout>
+
+
+    <View
+        android:id="@+id/bg_fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#48000000"
+        android:alpha="0"
+        android:visibility="gone"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_ig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/standard_23"
+        android:visibility="gone"
+        android:rotation="90"
+        app:fabSize="mini"
+        android:src="@drawable/btn_ig"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/standard_23"
+        android:visibility="gone"
+        app:fabSize="mini"
+        android:rotation="90"
+        android:src="@drawable/btn_fb"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:fabSize="normal"
+        android:src="@drawable/share"
+        android:tooltipText="Redes Sociales"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
