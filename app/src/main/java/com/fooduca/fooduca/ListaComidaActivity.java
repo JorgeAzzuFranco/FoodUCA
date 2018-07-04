@@ -30,10 +30,11 @@ public class ListaComidaActivity extends AppCompatActivity {
 
     RecyclerView rv;
     GridLayoutManager glm;
-    List<Comida> comidas;
+    String restau;
     RecyclerViewComida comidaAdapter;
     ImageView btn_fb;
     ImageView btn_ig;
+    Data data = new Data();
 
     //instancias fab menu
     static boolean isFabOpen = false;
@@ -47,6 +48,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cardview_restaurante_individual);
         final Bundle datos = this.getIntent().getExtras();
+        //restau = datos.getString("com");
         btn_fb = findViewById(R.id.btn_fb);
         btn_fb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,12 +83,7 @@ public class ListaComidaActivity extends AppCompatActivity {
 
         rv.setLayoutManager(glm);
 
-        comidas = new ArrayList<>();
-        comidas.add(new Comida("Kissitos", "comida 1", "2.50", R.drawable.comida));
-        comidas.add(new Comida("Loretos", "comida 2", "2.50", R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "comida 3", "2.50", R.drawable.comida));
-
-        comidaAdapter = new RecyclerViewComida(getApplicationContext(), comidas);
+        comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
         rv.setLayoutManager(glm);
         rv.setAdapter(comidaAdapter);
 

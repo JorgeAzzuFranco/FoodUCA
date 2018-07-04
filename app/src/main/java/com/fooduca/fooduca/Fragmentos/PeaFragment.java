@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
+import com.fooduca.fooduca.Data;
 import com.fooduca.fooduca.POJO.Restaurante;
 import com.fooduca.fooduca.R;
 
@@ -25,6 +26,7 @@ public class PeaFragment extends Fragment {
     GridLayoutManager glm;
     List<Restaurante> res;
     RecyclerView.Adapter rvadapter;
+    Data datos = new Data();
 
     public PeaFragment() {
         // Required empty public constructor
@@ -40,18 +42,9 @@ public class PeaFragment extends Fragment {
         recycler.setHasFixedSize(true);
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
 
-        res = new ArrayList<>();
-        res.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", null));
-        res.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null));
-        res.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null));
-        res.add(new Restaurante("La chinita",R.drawable.comida, "https://www.facebook.com/La-Chinita-374421906396594/",null));
-        res.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/",null));
-        res.add(new Restaurante("Jugolandia",R.drawable.comida, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null));
-        res.add(new Restaurante("Kissitos",R.drawable.comida,"https://www.facebook.com/kissitos/",null));
-        res.add(new Restaurante("La casita",R.drawable.comida));
         recycler.setLayoutManager(glm);
 
-        rvadapter = new RecyclerViewRestaurantes(getContext(),res);
+        rvadapter = new RecyclerViewRestaurantes(getContext(),datos.getResPea());
         recycler.setAdapter(rvadapter);
 
         return view;

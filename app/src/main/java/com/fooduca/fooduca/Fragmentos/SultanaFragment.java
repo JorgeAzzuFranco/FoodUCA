@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
+import com.fooduca.fooduca.Data;
 import com.fooduca.fooduca.POJO.Restaurante;
 import com.fooduca.fooduca.R;
 
@@ -26,6 +27,7 @@ public class SultanaFragment extends Fragment {
     GridLayoutManager glm;
     List<Restaurante> res;
     RecyclerView.Adapter rvadapter;
+    Data datos = new Data();
 
     public SultanaFragment() {
         // Required empty public constructor
@@ -40,14 +42,9 @@ public class SultanaFragment extends Fragment {
         recycler = view.findViewById(R.id.Recyclerview_restaurantes_sultana);
         recycler.setHasFixedSize(true);
         glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
-
-        res = new ArrayList<>();
-        res.add(new Restaurante("Mister Donut",R.drawable.logo_mister_donut,"http://www.misterdonut.com.sv/"));
-        res.add(new Restaurante("Wendy's",R.drawable.logo_wendys,"https://www.wendyselsalvador.com/"));
-
         recycler.setLayoutManager(glm);
 
-        rvadapter = new RecyclerViewRestaurantes(getContext(),res);
+        rvadapter = new RecyclerViewRestaurantes(getContext(),datos.getResSultana());
         recycler.setAdapter(rvadapter);
 
         return view;
