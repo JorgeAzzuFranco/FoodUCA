@@ -56,6 +56,7 @@ public class ListaComidaActivity extends AppCompatActivity {
                 String obtenerfb = datos.getString("fb");
                 if (obtenerfb != null) {
                     Uri uri = Uri.parse(obtenerfb);
+                    Toast.makeText(getApplicationContext(), "Redirigiendo a Facebook...",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }else {
@@ -70,6 +71,7 @@ public class ListaComidaActivity extends AppCompatActivity {
                 String obtenerig = datos.getString("ig");
                 if (obtenerig != null) {
                     Uri uri = Uri.parse(obtenerig);
+                    Toast.makeText(getApplicationContext(), "Redirigiendo a Instagram...",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }else {

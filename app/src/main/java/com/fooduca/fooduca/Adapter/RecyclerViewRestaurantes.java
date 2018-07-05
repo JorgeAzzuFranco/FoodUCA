@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fooduca.fooduca.ListaComidaActivity;
 import com.fooduca.fooduca.POJO.Restaurante;
@@ -49,16 +50,13 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
             @Override
             public void onClick(View v) {
                 String obtenerurl = restaurantes.get(position).getWeb();
-                String obtenerfb = restaurantes.get(position).getFb();
                 if (obtenerurl != null) {
+                    Toast.makeText(miContexto2, "Redirigiendo a pagina web...",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse(obtenerurl));
                     miContexto2.startActivity(intent);
                 }
                 else{
-//                    Intent intent = new Intent(Intent.ACTION_VIEW);
-//                    intent.setData(Uri.parse(obtenerfb));
-//                    miContexto2.startActivity(intent);
                     Intent intent = new Intent(v.getContext(), ListaComidaActivity.class);
                     intent.putExtra("com", restaurantes.get(position).getNombre_restaurante());
                     intent.putExtra("fb", restaurantes.get(position).getFb());
