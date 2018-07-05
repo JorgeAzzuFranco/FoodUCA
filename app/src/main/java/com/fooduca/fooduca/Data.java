@@ -48,7 +48,7 @@ public class Data {
         return resProceres;
     }
 
-    public ArrayList<Comida> getComidas(String rest) {
+    public ArrayList<Comida> getComidas(String rest){
         comidas.add(new Comida("Kissitos", "comida Kissitos", "2.50", R.drawable.comida));
         comidas.add(new Comida("Loreto's", "comida Loreto's", "2.50", R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "comida Crazy Food", "2.50", R.drawable.comida));
