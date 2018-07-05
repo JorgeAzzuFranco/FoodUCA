@@ -21,11 +21,11 @@ public class Data {
         resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", null));
         resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null));
         resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null));
-        resPea.add(new Restaurante("La chinita",R.drawable.comida, "https://www.facebook.com/La-Chinita-374421906396594/",null));
+        resPea.add(new Restaurante("The Mixed Brothers",R.drawable.logo_mixed_brothers,"https://www.facebook.com/kissitos/",null));
+        resPea.add(new Restaurante("KOKO",R.drawable.logo_koko, "https://www.facebook.com/La-Chinita-374421906396594/",null));
         resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/",null));
-        resPea.add(new Restaurante("Jugolandia",R.drawable.comida, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null));
-        resPea.add(new Restaurante("Kissitos",R.drawable.comida,"https://www.facebook.com/kissitos/",null));
-        resPea.add(new Restaurante("La casita",R.drawable.comida));
+        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null));
+        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito));
         return resPea;
     }
 
