@@ -53,7 +53,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
             holder.Precio.setText(comidas.get(position).getPrecio());
             holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
-            holder.Nombre_restaurante.setText(comidas.get(position).getNombre_restaurante());
+            //holder.Nombre_restaurante.setText(comidas.get(position).getNombre_restaurante());
         }
         else{
             holder.Nombre_comida.setText("No hay comida");
@@ -66,7 +66,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
         ImageView ComidaImg;
         TextView Precio;
         ImageButton btn_fav;
-        TextView Nombre_restaurante;
+        //TextView Nombre_restaurante;
 
         public MyViewHolder(View itemView){
             super(itemView);
@@ -75,7 +75,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             Precio =itemView.findViewById(R.id.txt_precio);
             ComidaImg = itemView.findViewById(R.id.img_comida);
             btn_fav = itemView.findViewById(R.id.imgbtn_fav);
-            Nombre_restaurante = itemView.findViewById(R.id.txt_nombre_restaurante);
+            //Nombre_restaurante = itemView.findViewById(R.id.txt_nombre_restaurante);
         }
     }
 }
