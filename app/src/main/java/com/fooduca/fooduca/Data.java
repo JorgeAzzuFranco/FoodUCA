@@ -94,12 +94,11 @@ public class Data {
         comidas.add(new Comida("Pepper Jack", "Burger Jack Res", 2.99, R.drawable.ppj_burger_jack_res));
         comidas.add(new Comida("Pepper Jack", "Panini Full-Ham", 3.49, R.drawable.ppj_panini_full_ham));
         comidas.add(new Comida("Pepper Jack", "Pepito de Res", 3.45, R.drawable.ppj_pepito_res));
-        comidas.add(new Comida("Pepper Jack", "Burger BBQ\n   Hongos", 3.49, R.drawable.ppj_burger_jack_res));
+        comidas.add(new Comida("Pepper Jack", "Burger BBQ\n   Hongos", 3.49, R.drawable.ppj_burger_bbq));
         comidas.add(new Comida("Pepper Jack", "Panini Margarita", 2.99, R.drawable.ppj_panini_margarita));
         comidas.add(new Comida("Pepper Jack", "Panini César", 3.49, R.drawable.ppj_panini_cesar));
         comidas.add(new Comida("Pepper Jack", "Ensalada César", 3.49, R.drawable.ppj_ensalada));
-        //TODO arreglar imagenes de BBQ tocino y de BBQ Hongos
-        comidas.add(new Comida("Pepper Jack", "Burger BBQ Tocino", 3.49, R.drawable.ppj_burger_jack_res));
+        comidas.add(new Comida("Pepper Jack", "Burger BBQ Tocino", 3.49, R.drawable.ppj_burger_bbq));
         comidas.add(new Comida("Pepper Jack", "Burger Macho\n       Nacho", 3.49, R.drawable.ppj_burger_macho_nacho));
         comidas.add(new Comida("Pepper Jack", "Doble Burger Jack", 3.99, R.drawable.ppj_doble_burger_jack));
         comidas.add(new Comida("Pepper Jack", "Burger Jack Lover", 3.99, R.drawable.ppj_jack_lover));
