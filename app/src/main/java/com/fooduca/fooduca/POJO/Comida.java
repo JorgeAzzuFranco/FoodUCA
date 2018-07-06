@@ -14,11 +14,11 @@ public class Comida {
 //    @ColumnInfo(name = "nombre")
     private String nombre_comida;
 //    @ColumnInfo(name = "precio")
-    private String precio;
+    private double precio;
 //    @ColumnInfo(name = "comidaImg")
     private int ComidaImg;
 
-    public Comida(String nombre_restaurante, String nombre_comida, String precio,int ComidaImg) {
+    public Comida(String nombre_restaurante, String nombre_comida, double precio,int ComidaImg) {
         this.nombre_restaurante = nombre_restaurante;
         this.nombre_comida = nombre_comida;
         this.precio = precio;
@@ -42,11 +42,11 @@ public class Comida {
         return nombre_restaurante;
     }
 
-    public String getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 

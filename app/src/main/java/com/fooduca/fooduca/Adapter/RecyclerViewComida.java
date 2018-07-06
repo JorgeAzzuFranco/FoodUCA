@@ -1,5 +1,6 @@
 package com.fooduca.fooduca.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -45,13 +46,14 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
         return new MyViewHolder(view);
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
 
         if(comidas != null){
             Comida current = comidas.get(position);
             holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
-            holder.Precio.setText(comidas.get(position).getPrecio());
+            holder.Precio.setText(String.format("$%.2f", comidas.get(position).getPrecio()));
             holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
             //holder.Nombre_restaurante.setText(comidas.get(position).getNombre_restaurante());
         }
