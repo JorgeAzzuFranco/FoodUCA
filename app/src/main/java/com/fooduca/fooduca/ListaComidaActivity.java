@@ -34,6 +34,8 @@ public class ListaComidaActivity extends AppCompatActivity {
     RecyclerViewComida comidaAdapter;
     ImageView btn_fb;
     ImageView btn_ig;
+    ImageView banner_view;
+    int banner;
     Data data = new Data();
 
     //instancias fab menu
@@ -54,6 +56,10 @@ public class ListaComidaActivity extends AppCompatActivity {
         glm = new GridLayoutManager(this, 2);
 
         rv.setLayoutManager(glm);
+        banner_view = findViewById(R.id.img_restaurante_individual);
+        banner = datos.getInt("img");
+
+        banner_view.setImageResource(banner);
 
         comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
         rv.setLayoutManager(glm);
@@ -64,6 +70,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         bgFabMenu = findViewById(R.id.bg_fab_menu);
         fabMain = findViewById(R.id.fab_main);
         fabIg = findViewById(R.id.fab_ig);
+
 
         fabMain.setOnClickListener(new View.OnClickListener() {
             @Override

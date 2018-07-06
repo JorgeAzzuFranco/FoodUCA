@@ -13,20 +13,32 @@ public class Restaurante {
     private String nombre_restaurante;
 //    @ColumnInfo(name = "restauranteImg")
     private int RestauranteImg;
+
+    public int getRestauranteBanner() {
+        return RestauranteBanner;
+    }
+
+    public void setRestauranteBanner(int restauranteBanner) {
+        RestauranteBanner = restauranteBanner;
+    }
+
+    private int RestauranteBanner;
 //    @ColumnInfo(name = "web")
     private String web;
     private String fb;
     private String ig;
     //Antiguo para Pea
-    public Restaurante(String nombre_restaurante, int RestauranteImg) {
+    public Restaurante(String nombre_restaurante, int RestauranteImg, int restauranteBanner) {
         this.nombre_restaurante = nombre_restaurante;
+        this.RestauranteBanner=restauranteBanner;
         this.RestauranteImg = RestauranteImg;
     }
     //Nuevo para Pea (con fb e ig)
-    public Restaurante(String nombre_restaurante, int restauranteImg, String fb, String ig) {
+    public Restaurante(String nombre_restaurante, int restauranteImg, String fb, String ig, int restauranteBanner) {
         this.idRes = idRes;
         this.nombre_restaurante = nombre_restaurante;
         RestauranteImg = restauranteImg;
+        this.RestauranteBanner = restauranteBanner;
         this.fb = fb;
         this.ig = ig;
     }

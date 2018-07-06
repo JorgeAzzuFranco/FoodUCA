@@ -18,16 +18,16 @@ public class Data {
 
     public ArrayList<Restaurante> getResPea() {
         //restaurantes Pea
-        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la"));
-        resPea.add(new Restaurante("Jugolandia",R.drawable.comida, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null));
-        resPea.add(new Restaurante("The Mixed Brothers",R.drawable.comida, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la"));
-        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la"));
-        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null));
-        resPea.add(new Restaurante("El Portalito",R.drawable.comida));
-        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null));
-        resPea.add(new Restaurante("La chinita",R.drawable.comida, "https://www.facebook.com/La-Chinita-374421906396594/",null));
-        resPea.add(new Restaurante("Kissitos",R.drawable.comida,"https://www.facebook.com/kissitos/",null));
-        resPea.add(new Restaurante("La casita",R.drawable.comida));
+        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_koko_dos));
+        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos));
+        resPea.add(new Restaurante("The Mixed Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos));
+        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos));
+        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null,R.drawable.logo_crazy_food_dos));
+        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos));
+        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos));
+        //resPea.add(new Restaurante("La chinita",R.drawable.comida, "https://www.facebook.com/La-Chinita-374421906396594/",null));
+        //resPea.add(new Restaurante("Kissitos",R.drawable.comida,"https://www.facebook.com/kissitos/",null));
+        resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos));
         return resPea;
     }
 
