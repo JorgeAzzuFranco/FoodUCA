@@ -17,13 +17,15 @@
             android:layout_width="wrap_content"
             android:layout_height="160dp"
             android:background="#FFFFFF"
-            android:src="@drawable/comida" />
+            android:src="@drawable/comida"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/txt_nombre_restaurante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_gravity="center"
             android:text="Nombre"
             android:textColor="#000"
             android:textSize="20dp" />

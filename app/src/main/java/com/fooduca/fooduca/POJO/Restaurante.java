@@ -23,19 +23,22 @@ public class Restaurante {
     }
 
     private int RestauranteBanner;
+    private boolean te;
 //    @ColumnInfo(name = "web")
     private String web;
     private String fb;
     private String ig;
     //Antiguo para Pea
-    public Restaurante(String nombre_restaurante, int RestauranteImg, int restauranteBanner) {
+    public Restaurante(String nombre_restaurante, int RestauranteImg, int restauranteBanner, boolean tea) {
         this.nombre_restaurante = nombre_restaurante;
         this.RestauranteBanner=restauranteBanner;
         this.RestauranteImg = RestauranteImg;
+        this.te = tea;
     }
     //Nuevo para Pea (con fb e ig)
-    public Restaurante(String nombre_restaurante, int restauranteImg, String fb, String ig, int restauranteBanner) {
+    public Restaurante(String nombre_restaurante, int restauranteImg, String fb, String ig, int restauranteBanner, boolean tea) {
         this.idRes = idRes;
+        this.te = tea;
         this.nombre_restaurante = nombre_restaurante;
         RestauranteImg = restauranteImg;
         this.RestauranteBanner = restauranteBanner;
@@ -47,6 +50,10 @@ public class Restaurante {
         this.nombre_restaurante = nombre_restaurante;
         RestauranteImg = restauranteImg;
         this.web = web;
+    }
+
+    public boolean isTe() {
+        return te;
     }
 
     public int getIdRes() {

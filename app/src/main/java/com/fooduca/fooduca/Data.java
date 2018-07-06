@@ -18,16 +18,14 @@ public class Data {
 
     public ArrayList<Restaurante> getResPea() {
         //restaurantes Pea
-        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_koko_dos));
-        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos));
-        resPea.add(new Restaurante("The Mixed Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos));
-        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos));
-        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null,R.drawable.logo_crazy_food_dos));
-        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos));
-        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos));
-        //resPea.add(new Restaurante("La chinita",R.drawable.comida, "https://www.facebook.com/La-Chinita-374421906396594/",null));
-        //resPea.add(new Restaurante("Kissitos",R.drawable.comida,"https://www.facebook.com/kissitos/",null));
-        resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos));
+        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
+        resPea.add(new Restaurante("The Mixed Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
+        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
+        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null,R.drawable.logo_crazy_food_dos, true));
+        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
+        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
+        resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
         return resPea;
     }
 
@@ -103,6 +101,14 @@ public class Data {
         comidas.add(new Comida("Pepper Jack", "Doble BurgerJack", "$3.99", R.drawable.comida));
         comidas.add(new Comida("Pepper Jack", "Burger Magna7", "$3.99", R.drawable.comida));
         comidas.add(new Comida("Pepper Jack", "Burger Jack Lover", "$3.99", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Panini Cheddar Shroomy", "$2.50", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Panini Clásico Dijon", "$2.50", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Panini Chimi Chimi Chicken", "$2.50", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Panini Caprese", "$2.50", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Panini Tres Quesos", "$2.50", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Pizza personal", "$2.50", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Pizza grandota (10 piezas)", "$12.00", R.drawable.comida));
+        comidas.add(new Comida("The Mixed Brothers", "Waffle", "$2.00", R.drawable.comida));
 
         ArrayList<Comida> menu = new ArrayList<>();
         for(int i=0;i<comidas.size();i++){

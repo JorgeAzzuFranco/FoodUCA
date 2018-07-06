@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
@@ -31,10 +32,12 @@ public class ListaComidaActivity extends AppCompatActivity {
     RecyclerView rv;
     GridLayoutManager glm;
     String restau;
+    boolean tea;
     RecyclerViewComida comidaAdapter;
     ImageView btn_fb;
     ImageView btn_ig;
     ImageView banner_view;
+    TextView freeTea;
     int banner;
     Data data = new Data();
 
@@ -58,12 +61,19 @@ public class ListaComidaActivity extends AppCompatActivity {
         rv.setLayoutManager(glm);
         banner_view = findViewById(R.id.img_restaurante_individual);
         banner = datos.getInt("img");
+        tea = datos.getBoolean("te");
 
         banner_view.setImageResource(banner);
 
         comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
         rv.setLayoutManager(glm);
         rv.setAdapter(comidaAdapter);
+
+        //Te gratis
+        if(tea){
+            freeTea = findViewById(R.id.te_id);
+            freeTea.setText("*Todos los platillos incluyen te ");
+        }
 
         //Floating menu
         fabFb = findViewById(R.id.fab_fb);

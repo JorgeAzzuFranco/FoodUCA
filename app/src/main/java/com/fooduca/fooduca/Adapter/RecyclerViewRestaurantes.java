@@ -62,6 +62,7 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
                     intent.putExtra("fb", restaurantes.get(position).getFb());
                     intent.putExtra("ig", restaurantes.get(position).getIg());
                     intent.putExtra("img", restaurantes.get(position).getRestauranteBanner());
+                    intent.putExtra("te",restaurantes.get(position).isTe());
                     miContexto2.startActivity(intent);
                 }
             }
