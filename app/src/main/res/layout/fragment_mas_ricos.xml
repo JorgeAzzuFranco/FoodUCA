@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragmentos.MasRicosFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:background="@drawable/lupa"
+    >
     <TextView
+        android:id="@+id/pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio mínimo: "
+        android:textSize="@dimen/standard_23"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/precio_min"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pm"
+        android:layout_width="wrap_content"
+        android:hint=" Costo mínimo a gastar "
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    <TextView
+        android:id="@+id/pmm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio máximo: "
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/standard_23"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_marginTop="180dp"
+        android:id="@+id/precio_max"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint=" Costo máximo a gastar "
+        />
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="155dp"
+        android:text="Buscar"
+        android:textAlignment="center" />
+    <TextView
+        android:layout_marginVertical="300dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Mas ricos fragment" />
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_23"
+        android:text="Bienvenido a búsqueda por precio, por favor ingresa el precio mínimo y máximo que estas dispuesto a gastar"/>
 
-</FrameLayout>
+</RelativeLayout>
