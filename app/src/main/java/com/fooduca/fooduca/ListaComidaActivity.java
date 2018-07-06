@@ -72,7 +72,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         //Te gratis
         if(tea){
             freeTea = findViewById(R.id.te_id);
-            freeTea.setText("*Todos los platillos incluyen te ");
+            freeTea.setText("*Todos los platillos incluyen te* ");
         }
 
         //Floating menu
