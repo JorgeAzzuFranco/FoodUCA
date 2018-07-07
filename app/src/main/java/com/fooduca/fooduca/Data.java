@@ -1,13 +1,9 @@
 package com.fooduca.fooduca;
 
-import android.util.Log;
-
 import com.fooduca.fooduca.POJO.Comida;
 import com.fooduca.fooduca.POJO.Restaurante;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Data {
@@ -255,4 +251,5 @@ public class Data {
         Comida random= comidas.get(new Random().nextInt(comidas.size()));
         return random;
     }
+
 }
