@@ -26,6 +26,7 @@ public class Data {
         resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
         resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
         resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Kissitos",R.drawable.logo_loretos,R.drawable.logo_loretos_dos,true));
         return resPea;
     }
 
@@ -49,12 +50,11 @@ public class Data {
     }
 
     public ArrayList<Comida> getComidas(String rest){
-        comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.lore_tacos));
-        comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.lore_hamburguesa));
-        comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.lore_burrito));
-        comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.lore_pulled_pork));
-        comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.lore_hot_dog));
-        comidas.add(new Comida("Loreto's", "Torta", 3.00, R.drawable.lore_torta));
+        comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.comida));
+        comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.comida));
         //desde
         comidas.add(new Comida("El Portalito", "Waffles",1.50, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Wraps + lays", 2.50, R.drawable.comida));
@@ -161,6 +161,43 @@ public class Data {
         comidas.add(new Comida("koko", "Agua litro", 0.75, R.drawable.comida));
         comidas.add(new Comida("koko", "Te lipton botella", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Raptor", 1.15, R.drawable.comida));
+        //kissitos no desaparezcas
+        comidas.add(new Comida("Kissitos", "Pupusa revuelta o frijol con queso", 0.55, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Pupusa de queso", 0.60, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "3 pupusas pequeñas", 1.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Panini desayuno", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Burrito mañanero", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana guanaca", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Típico express", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "3 pupusas medianas + bebida", 2.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Desayuno\ntípico", 2.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Pancakes", 2.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Meltys 1 ingrediente", 2.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Croissant pequeño", 2.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Meltys con huevo", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana 1 ingrediente", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Espatano pequeño", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Filete a la plancha", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Atenas", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Tacos", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "4 Mozarella Sticks", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Croissant con Omelette", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Mexicana", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Búfalo", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Italiana", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana 3 Quesos", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Suprema", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Chipotle", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Meat lovers", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Alfredo", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Californiana", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Burrito pollo/res", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "7 chunks", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Stick sampler", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Hamburguesa", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Lasagna", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Hulk", 3.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Ensalada", 3.75, R.drawable.comida));
 
         ArrayList<Comida> menu = new ArrayList<>();
         for(int i=0;i<comidas.size();i++){
