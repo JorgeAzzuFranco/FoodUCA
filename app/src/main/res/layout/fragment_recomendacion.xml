@@ -17,6 +17,7 @@
             android:layout_marginLeft="25dp"
             android:layout_centerHorizontal="true"/>
         <ImageView
+            android:id="@+id/recomen_comida_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="170dp"
@@ -25,6 +26,7 @@
 
         <TextView
             android:id="@+id/txt_nombre_comida"
+            android:textAlignment="center"
             android:layout_marginTop="280dp"
             android:layout_marginLeft="30dp"
             android:layout_width="match_parent"
@@ -35,6 +37,7 @@
 
         <TextView
             android:id="@+id/txt_nombre_restaurante"
+            android:textAlignment="center"
             android:layout_marginTop="330dp"
             android:layout_marginLeft="30dp"
             android:layout_width="match_parent"
@@ -47,6 +50,7 @@
             android:id="@+id/txt_precio"
             android:layout_marginTop="380dp"
             android:layout_marginLeft="30dp"
+            android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Precio_Comida"

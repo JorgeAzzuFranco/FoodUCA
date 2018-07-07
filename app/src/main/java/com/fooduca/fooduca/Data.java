@@ -8,49 +8,17 @@ import com.fooduca.fooduca.POJO.Restaurante;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Data {
 
     ArrayList<Restaurante> resSultana = new ArrayList<>();
     ArrayList<Restaurante> resProceres = new ArrayList<>();
     ArrayList<Restaurante> resPea = new ArrayList<>();
-    ArrayList<Comida> comidas = new ArrayList<>();
+    ArrayList<Comida> comidas;
 
-    public ArrayList<Restaurante> getResPea() {
-        //restaurantes Pea
-        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_loretos_dos,true));
-        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
-        resPea.add(new Restaurante("The Mixed\n Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
-        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
-        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null,R.drawable.logo_crazy_food_dos, true));
-        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
-        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
-        resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
-        resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,R.drawable.logo_kissitos_dos,true));
-        resPea.add(new Restaurante("Pronto...",R.drawable.log,R.drawable.holi,false));
-        return resPea;
-    }
-
-    public ArrayList<Restaurante> getResSultana() {
-        resSultana.add(new Restaurante("Mister Donut",R.drawable.logo_mister_donut,"http://www.misterdonut.com.sv/"));
-        resSultana.add(new Restaurante("Wendy's",R.drawable.logo_wendys,"https://www.wendyselsalvador.com/"));
-
-        return resSultana;
-    }
-
-    public ArrayList<Restaurante> getResProceres() {
-        resProceres.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut,"https://www.pizzahut.com.sv/"));
-        resProceres.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines, "http://www.cebollines.com/"));
-        resProceres.add(new Restaurante("China Wok",R.drawable.logo_china_wok, "http://www.chinawok.com.sv/"));
-        resProceres.add(new Restaurante("Pollo Campero",R.drawable.logo_pollo_campero,"https://www.campero.com/sv"));
-        resProceres.add(new Restaurante("Burguer King",R.drawable.logo_burger_king, "https://www.bk.com/international"));
-        resProceres.add(new Restaurante("McDonald",R.drawable.logo_mc_donald,"https://www.mcdonalds.com/us/es-us.html"));
-        resProceres.add(new Restaurante("Starbucks",R.drawable.logo_starbucks,"https://www.starbucks.com/"));
-        resProceres.add(new Restaurante("Wendy's",R.drawable.logo_wendys,"https://www.wendyselsalvador.com/"));
-        return resProceres;
-    }
-
-    public ArrayList<Comida> getComidas(String rest){
+    public Data() {
+        comidas = new ArrayList<>();
         comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.lore_tacos));
         comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.lore_hamburguesa));
         comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.lore_burrito));
@@ -235,7 +203,44 @@ public class Data {
         comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Crazy combinado + papas o nachos", 3.50, R.drawable.comida));
+        this.comidas = comidas;
+    }
 
+    public ArrayList<Restaurante> getResPea() {
+        //restaurantes Pea
+        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_loretos_dos,true));
+        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
+        resPea.add(new Restaurante("The Mixed\n Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
+        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
+        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null,R.drawable.logo_crazy_food_dos, true));
+        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
+        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
+        resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,R.drawable.logo_kissitos_dos,true));
+        resPea.add(new Restaurante("Pronto...",R.drawable.log,R.drawable.holi,false));
+        return resPea;
+    }
+
+    public ArrayList<Restaurante> getResSultana() {
+        resSultana.add(new Restaurante("Mister Donut",R.drawable.logo_mister_donut,"http://www.misterdonut.com.sv/"));
+        resSultana.add(new Restaurante("Wendy's",R.drawable.logo_wendys,"https://www.wendyselsalvador.com/"));
+
+        return resSultana;
+    }
+
+    public ArrayList<Restaurante> getResProceres() {
+        resProceres.add(new Restaurante("Pizza Hut",R.drawable.logo_pizza_hut,"https://www.pizzahut.com.sv/"));
+        resProceres.add(new Restaurante("Los Cebollines",R.drawable.logo_los_cebollines, "http://www.cebollines.com/"));
+        resProceres.add(new Restaurante("China Wok",R.drawable.logo_china_wok, "http://www.chinawok.com.sv/"));
+        resProceres.add(new Restaurante("Pollo Campero",R.drawable.logo_pollo_campero,"https://www.campero.com/sv"));
+        resProceres.add(new Restaurante("Burguer King",R.drawable.logo_burger_king, "https://www.bk.com/international"));
+        resProceres.add(new Restaurante("McDonald",R.drawable.logo_mc_donald,"https://www.mcdonalds.com/us/es-us.html"));
+        resProceres.add(new Restaurante("Starbucks",R.drawable.logo_starbucks,"https://www.starbucks.com/"));
+        resProceres.add(new Restaurante("Wendy's",R.drawable.logo_wendys,"https://www.wendyselsalvador.com/"));
+        return resProceres;
+    }
+
+    public ArrayList<Comida> getComidas(String rest){
 
         ArrayList<Comida> menu = new ArrayList<>();
         for(int i=0;i<comidas.size();i++){
@@ -244,5 +249,10 @@ public class Data {
             }
         }
         return menu;
+    }
+
+    public Comida randomItem(){
+        Comida random= comidas.get(new Random().nextInt(comidas.size()));
+        return random;
     }
 }
