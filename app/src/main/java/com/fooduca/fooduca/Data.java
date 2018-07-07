@@ -18,7 +18,7 @@ public class Data {
 
     public ArrayList<Restaurante> getResPea() {
         //restaurantes Pea
-        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_loretos_dos,true));
         resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
         resPea.add(new Restaurante("The Mixed\n Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
         resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
@@ -54,7 +54,7 @@ public class Data {
         comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.lore_burrito));
         comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.lore_pulled_pork));
         comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.lore_hot_dog));
-        comidas.add(new Comida("Loreto's", "Torta", 2.25, R.drawable.lore_torta));
+        comidas.add(new Comida("Loreto's", "Torta", 3.00, R.drawable.lore_torta));
         //desde
         comidas.add(new Comida("El Portalito", "Waffles",1.50, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Wraps + lays", 2.50, R.drawable.comida));
