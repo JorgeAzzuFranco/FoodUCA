@@ -229,10 +229,13 @@ public class Data {
         comidas.add(new Comida("Crazy Food", "Crazy wrap + papas o nachos", 2.75, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Crazy torta + papas o nachos", 2.75, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Crazy pechus + papas o nachos", 2.75, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Fritito + papas o nachos", 2.0, R.drawable.comida));
+        comidas.add(new Comida("Crazy Food", "Fritito + papas o nachos", 1.50, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Cheese meat + papas o nachos", 3.00, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o nachos", 2.00, R.drawable.comida));
         comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.comida));
+        comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.comida));
+        comidas.add(new Comida("Crazy Food", "Crazy combinado + papas o nachos", 3.50, R.drawable.comida));
+
 
         ArrayList<Comida> menu = new ArrayList<>();
         for(int i=0;i<comidas.size();i++){
