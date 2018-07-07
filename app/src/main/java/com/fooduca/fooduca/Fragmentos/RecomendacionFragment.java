@@ -50,7 +50,7 @@ public class RecomendacionFragment extends Fragment {
         imageView.setImageResource(random.getComidaImg());
         nombrePlato.setText(random.getNombre_comida());
         nombreRest.setText(random.getNombre_restaurante());
-        precio.setText(String.format("$%.2f", datos.randomItem().getPrecio()));
+        precio.setText(String.format("$%.2f", random.getPrecio()));
 
         return view;
     }
