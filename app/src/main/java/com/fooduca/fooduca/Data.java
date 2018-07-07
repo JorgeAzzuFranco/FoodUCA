@@ -18,7 +18,7 @@ public class Data {
 
     public ArrayList<Restaurante> getResPea() {
         //restaurantes Pea
-        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_loretos_dos,true));
         resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
         resPea.add(new Restaurante("The Mixed\n Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
         resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
@@ -26,6 +26,7 @@ public class Data {
         resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
         resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
         resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Kissitos",R.drawable.logo_loretos,R.drawable.logo_loretos_dos,true));
         return resPea;
     }
 
@@ -160,6 +161,42 @@ public class Data {
         comidas.add(new Comida("koko", "Agua litro", 0.75, R.drawable.comida));
         comidas.add(new Comida("koko", "Te lipton botella", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Raptor", 1.15, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Pupusa revuelta o frijol con queso", 0.55, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Pupusa de queso", 0.60, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "3 pupusas pequeñas", 1.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Panini desayuno", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Burrito mañanero", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana guanaca", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Típico express", 1.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "3 pupusas medianas + bebida", 2.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Desayuno\ntípico", 2.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Pancakes", 2.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Meltys 1 ingrediente", 2.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Croissant pequeño", 2.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Meltys con huevo", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana 1 ingrediente", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Espatano pequeño", 3.00, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Filete a la plancha", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Atenas", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Tacos", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "4 Mozarella Sticks", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Croissant con Omelette", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Mexicana", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Búfalo", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Italiana", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana 3 Quesos", 3.25, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Suprema", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Chipotle", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Meat lovers", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Alfredo", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Troyana Californiana", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Burrito pollo/res", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "7 chunks", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Stick sampler", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Hamburguesa", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Lasagna", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Hulk", 3.75, R.drawable.comida));
+        comidas.add(new Comida("Kissitos", "Ensalada", 3.75, R.drawable.comida));
 
         ArrayList<Comida> menu = new ArrayList<>();
         for(int i=0;i<comidas.size();i++){
