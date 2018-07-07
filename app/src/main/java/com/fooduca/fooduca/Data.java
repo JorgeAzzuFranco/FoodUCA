@@ -72,21 +72,21 @@ public class Data {
         comidas.add(new Comida("El Portalito", "Pizza grande 10 porciones de 3 Ingredientes", 8.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Pizza gigante 12 porciones de 3 Ingredientes", 10.00, R.drawable.comida));
         //desde es el licuado osea el de abajo
-        comidas.add(new Comida("Jugolandia", "Licuados", 1.00, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Frozen", 1.00, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Hot Dog", 1.00, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Sandwich", 1.00, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Papas Fritas", 1.25, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Pan con ajo (3 piezas)", 1.50, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Torta Loca", 2.00, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Panini", 2.00, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Orden de 5 Chorizos + frijoles + tortilla", 2.00, R.drawable.comida));
+        comidas.add(new Comida("Jugolandia", "Licuados", 1.00, R.drawable.jl_licuado));
+        comidas.add(new Comida("Jugolandia", "Frozen", 1.00, R.drawable.jl_frozen));
+        comidas.add(new Comida("Jugolandia", "Hot Dog", 1.00, R.drawable.jl_hot_dog));
+        comidas.add(new Comida("Jugolandia", "Sandwich", 1.00, R.drawable.jl_sandwich));
+        comidas.add(new Comida("Jugolandia", "Papas Fritas", 1.25, R.drawable.jl_papas));
+        comidas.add(new Comida("Jugolandia", "Pan con ajo (3 piezas)", 1.50, R.drawable.jl_pan_con_ajo));
+        comidas.add(new Comida("Jugolandia", "Torta Loca", 2.00, R.drawable.jl_torta));
+        comidas.add(new Comida("Jugolandia", "Panini", 2.00, R.drawable.jl_panini));
+        comidas.add(new Comida("Jugolandia", "Orden de 5 Chorizos + frijoles + tortilla", 2.00, R.drawable.jl_chorizo));
         //desde
-        comidas.add(new Comida("Jugolandia", "Hamburguesa", 2.25, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Sandwich Triple Express", 2.50, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Alitas de pollo + papas fritas", 2.50, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Pollo a la plancha + te + chirimol + arroz + ensalada + 2 tortillas", 2.50, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Carne a la plancha + te + chirimol + arroz + ensalada + 2 tortillas", 2.75, R.drawable.comida));
+        comidas.add(new Comida("Jugolandia", "Hamburguesa", 2.25, R.drawable.jl_hamburguesa));
+        comidas.add(new Comida("Jugolandia", "Sandwich Triple Express", 2.50, R.drawable.jl_sandwich_triple));
+        comidas.add(new Comida("Jugolandia", "Alitas de pollo + papas fritas", 2.50, R.drawable.jl_alitas_de_pollo));
+        comidas.add(new Comida("Jugolandia", "Pollo a la plancha + te + chirimol + arroz + ensalada + 2 tortillas", 2.50, R.drawable.jl_pechuga_pollo));
+        comidas.add(new Comida("Jugolandia", "Carne a la plancha + te + chirimol + arroz + ensalada + 2 tortillas", 2.75, R.drawable.jl_carne_plancha));
         comidas.add(new Comida("Pepper Jack", "Wraps", 2.99, R.drawable.ppj_wrap));
         comidas.add(new Comida("Pepper Jack", "Burrito de Res", 2.99, R.drawable.ppj_burrito_res));
         comidas.add(new Comida("Pepper Jack", "Club Sandwich", 2.99, R.drawable.ppj_club_sandwich));
