@@ -49,11 +49,12 @@ public class Data {
     }
 
     public ArrayList<Comida> getComidas(String rest){
-        comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.comida));
+        comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.lore_tacos));
+        comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.lore_hamburguesa));
+        comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.lore_burrito));
+        comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.lore_pulled_pork));
+        comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.lore_hot_dog));
+        comidas.add(new Comida("Loreto's", "Torta", 2.25, R.drawable.lore_torta));
         //desde
         comidas.add(new Comida("El Portalito", "Waffles",1.50, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Wraps + lays", 2.50, R.drawable.comida));
