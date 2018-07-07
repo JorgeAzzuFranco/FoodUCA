@@ -18,7 +18,7 @@ public class Data {
 
     public ArrayList<Restaurante> getResPea() {
         //restaurantes Pea
-        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_koko_dos,true));
+        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_loretos_dos,true));
         resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
         resPea.add(new Restaurante("The Mixed\n Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
         resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
@@ -49,43 +49,44 @@ public class Data {
     }
 
     public ArrayList<Comida> getComidas(String rest){
-        comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.comida));
-        comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.comida));
+        comidas.add(new Comida("Loreto's", "Tacos de res,\npastor o pollo", 2.75, R.drawable.lore_tacos));
+        comidas.add(new Comida("Loreto's", "Hamburguesa\n      de res", 3.00, R.drawable.lore_hamburguesa));
+        comidas.add(new Comida("Loreto's", "Burrito de res,\npastor o pollo", 3.00, R.drawable.lore_burrito));
+        comidas.add(new Comida("Loreto's", "Hamburguesa\n   Pulled Pork", 3.50, R.drawable.lore_pulled_pork));
+        comidas.add(new Comida("Loreto's", "Hot Dog", 2.25, R.drawable.lore_hot_dog));
+        comidas.add(new Comida("Loreto's", "Torta", 3.00, R.drawable.lore_torta));
         //desde
         comidas.add(new Comida("El Portalito", "Waffles",1.50, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Wraps + lays", 2.50, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Pizza personal 1 Ingrediente", 3.00, R.drawable.comida));
-        comidas.add(new Comida("El Portalito", "Pan con ajo", 3.00, R.drawable.comida));
+        comidas.add(new Comida("El Portalito", "Pizza calzone 3 Ingredientes", 4.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Palitroques", 3.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Lasaña", 3.00, R.drawable.comida));
-        comidas.add(new Comida("El Portalito", "Pechuguitas de pollo empanizadas + papas o ensalada", 3.00, R.drawable.comida));
+        comidas.add(new Comida("El Portalito", "Pan con ajo", 3.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Tacos tostados", 3.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Carne a la plancha", 3.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Baleada + papas fritas", 3.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Pizza super personal 2 Ingredientes ", 4.00, R.drawable.comida));
-        comidas.add(new Comida("El Portalito", "Pizza calzone 3 Ingredientes", 4.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Pizza mediana 8 porciones 3 Ingredientes", 6.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Pizza grande 10 porciones de 3 Ingredientes", 8.00, R.drawable.comida));
         comidas.add(new Comida("El Portalito", "Pizza gigante 12 porciones de 3 Ingredientes", 10.00, R.drawable.comida));
+        comidas.add(new Comida("El Portalito", "Pechuguitas de pollo empanizadas + papas o ensalada", 3.00, R.drawable.comida));
         //desde es el licuado osea el de abajo
         comidas.add(new Comida("Jugolandia", "Licuados", 1.00, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Frozen", 1.00, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Hot Dog", 1.00, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Sandwich", 1.00, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Papas Fritas", 1.25, R.drawable.comida));
-        comidas.add(new Comida("Jugolandia", "Pan con ajo (3 piezas)", 1.50, R.drawable.comida));
+        comidas.add(new Comida("Jugolandia", "Hamburguesa", 2.25, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Torta Loca", 2.00, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Panini", 2.00, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Orden de 5 Chorizos + frijoles + tortilla", 2.00, R.drawable.comida));
-        //desde
-        comidas.add(new Comida("Jugolandia", "Hamburguesa", 2.25, R.drawable.comida));
+        comidas.add(new Comida("Jugolandia", "Pan con ajo\nque incluye\n (3 piezas)", 1.50, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Sandwich Triple Express", 2.50, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Alitas de pollo + papas fritas", 2.50, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Pollo a la plancha + te + chirimol + arroz + ensalada + 2 tortillas", 2.50, R.drawable.comida));
         comidas.add(new Comida("Jugolandia", "Carne a la plancha + te + chirimol + arroz + ensalada + 2 tortillas", 2.75, R.drawable.comida));
+        //desde
         comidas.add(new Comida("Pepper Jack", "Wraps", 2.99, R.drawable.ppj_wrap));
         comidas.add(new Comida("Pepper Jack", "Burrito de Res", 2.99, R.drawable.ppj_burrito_res));
         comidas.add(new Comida("Pepper Jack", "Club Sandwich", 2.99, R.drawable.ppj_club_sandwich));
@@ -103,12 +104,13 @@ public class Data {
         comidas.add(new Comida("Pepper Jack", "Doble Burger Jack", 3.99, R.drawable.ppj_doble_burger_jack));
         comidas.add(new Comida("Pepper Jack", "Burger Jack Lover", 3.99, R.drawable.ppj_jack_lover));
         comidas.add(new Comida("Pepper Jack", "Burger Magna7", 3.99, R.drawable.ppj_burger_magna_7));
-        comidas.add(new Comida("The Mixed\n Brothers", "Galletas con chispas de chocolate", 0.50, R.drawable.comida));
+        //desde
+        comidas.add(new Comida("The Mixed\n Brothers", "Frozen", 1.75, R.drawable.comida));
+        comidas.add(new Comida("The Mixed\n Brothers", "Cheesecake", 1.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Brownie\nTradicional\n(con azúcar glass)", 1.00, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Brownie\nRed Velvet\n(con azúcar glass)", 1.00, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Brownie con\ntopping", 1.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Flan de caramelo", 1.50, R.drawable.comida));
-        comidas.add(new Comida("The Mixed\n Brothers", "Cheesecake", 1.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Tres leches", 1.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Pie de Manzana", 1.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Waffle", 2.00, R.drawable.comida));
@@ -116,42 +118,42 @@ public class Data {
         comidas.add(new Comida("The Mixed\n Brothers", "Panini Cheddar\nShroomy", 2.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Panini Clásico\nDijon", 2.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Panini Chimi\nChimi Chicken", 2.50, R.drawable.comida));
-        comidas.add(new Comida("The Mixed\n Brothers", "Panini Caprese", 2.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Panini Tres\nQuesos", 2.50, R.drawable.comida));
+        comidas.add(new Comida("The Mixed\n Brothers", "Panini Caprese", 2.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Pizza personal", 2.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Tiramisú", 3.00, R.drawable.comida));
+        comidas.add(new Comida("The Mixed\n Brothers", "Sodas", 0.60, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Panini en combo", 3.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Pizza grandota\n(10 piezas)", 12.00, R.drawable.comida));
-        comidas.add(new Comida("The Mixed\n Brothers", "Sodas", 0.60, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Jugos", 0.50, R.drawable.comida));
         comidas.add(new Comida("The Mixed\n Brothers", "Agua", 0.50, R.drawable.comida));
+        comidas.add(new Comida("The Mixed\n Brothers", "Galletas con chispas de chocolate", 0.50, R.drawable.comida));
         //desde
-        comidas.add(new Comida("The Mixed\n Brothers", "Frozen", 1.75, R.drawable.comida));
+
         comidas.add(new Comida("koko", "3 Deditos de queso", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Orden pan con ajo", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Papas fritas", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Hot Dog", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Nachos + soda, jugo o té de lata", 1.50, R.drawable.comida));
-        comidas.add(new Comida("koko", "Hamburguesa", 1.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Hot Dog + papas fritas", 2.00, R.drawable.comida));
+        comidas.add(new Comida("koko", "Hamburguesa", 1.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Torta de carne", 2.00, R.drawable.comida));
         comidas.add(new Comida("koko", "3 Alitas + papas fritas", 2.00, R.drawable.comida));
         comidas.add(new Comida("koko", "5 Nuggets + papas fritas", 2.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Hamburguesa + papas fritas", 2.50, R.drawable.comida));
-        comidas.add(new Comida("koko", "Panini", 2.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Panini de jamón + papas fritas", 3.00, R.drawable.comida));
+        comidas.add(new Comida("koko", "Panini", 2.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Pizza", 3.00, R.drawable.comida));
-        comidas.add(new Comida("koko", "Pizza + pan con ajo", 3.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Pudding", 0.50, R.drawable.comida));
+        comidas.add(new Comida("koko", "Café con leche", 0.35, R.drawable.comida));
         comidas.add(new Comida("koko", "Yogurt", 0.75, R.drawable.comida));
         comidas.add(new Comida("koko", "Muffin", 0.80, R.drawable.comida));
         comidas.add(new Comida("koko", "Bolsa con agua", 0.15, R.drawable.comida));
         comidas.add(new Comida("koko", "Café", 0.25, R.drawable.comida));
-        comidas.add(new Comida("koko", "Café con leche", 0.35, R.drawable.comida));
+        comidas.add(new Comida("koko", "Pizza + pan con ajo", 3.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Chocolate instantáneo", 0.35, R.drawable.comida));
         comidas.add(new Comida("koko", "Soda lata pequeña", 0.40, R.drawable.comida));
         comidas.add(new Comida("koko", "Kolashampan/Salvacola lata", 0.50, R.drawable.comida));
-        comidas.add(new Comida("koko", "Agua medio litro", 0.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Jugo del valle", 0.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Hi Energy", 0.50, R.drawable.comida));
         comidas.add(new Comida("koko", "Soda lata", 0.60, R.drawable.comida));
@@ -160,6 +162,7 @@ public class Data {
         comidas.add(new Comida("koko", "Agua litro", 0.75, R.drawable.comida));
         comidas.add(new Comida("koko", "Te lipton botella", 1.00, R.drawable.comida));
         comidas.add(new Comida("koko", "Raptor", 1.15, R.drawable.comida));
+        comidas.add(new Comida("koko", "Agua medio litro", 0.50, R.drawable.comida));
 
         ArrayList<Comida> menu = new ArrayList<>();
         for(int i=0;i<comidas.size();i++){
