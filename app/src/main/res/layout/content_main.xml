@@ -10,5 +10,11 @@
     tools:showIn="@layout/app_bar_main"
     android:id="@+id/contenido">
 
+    <ImageView
+        android:id="@+id/holi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hello"/>
+
 
 </RelativeLayout>

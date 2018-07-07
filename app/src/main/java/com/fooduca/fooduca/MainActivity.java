@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
 import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity
 
     List<Comida> comidas;
     Fragment fragment = null;
+    ImageView holi;
 
 
     //ESTO DA EL MENSAJE PARA QUE NO SE SALGA DE UN SOLO DEL NAVIGATION DRAWER
@@ -129,23 +131,44 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        holi = findViewById(R.id.holi);
+        int img = 0;
         boolean seleccionado = false;
 
         if (id == R.id.nav_camera) {
             fragment = new RecomendacionFragment();
+            if (img == 0){
+                holi.setImageResource(R.drawable.holi);
+                img = 1;
+            }
             seleccionado = true;
         } else if (id == R.id.nav_gallery) {
             fragment = new PeaFragment();
+            if (img == 0){
+                holi.setImageResource(R.drawable.holi);
+                img = 1;
+            }
             seleccionado = true;
         } else if (id == R.id.nav_slideshow) {
             fragment = new SultanaFragment();
+            if (img == 0){
+                holi.setImageResource(R.drawable.holi);
+                img = 1;
+            }
             seleccionado = true;
         } else if (id == R.id.nav_manage) {
             fragment = new ProceresFragment();
+            if (img == 0){
+                holi.setImageResource(R.drawable.holi);
+                img = 1;
+            }
             seleccionado = true;
         } else if (id == R.id.nav_sara) {
             fragment = new MasRicosFragment();
+            if (img == 0){
+                holi.setImageResource(R.drawable.holi);
+                img = 1;
+            }
             seleccionado = true;
         } else if (id == R.id.nav_marlene) {
 
