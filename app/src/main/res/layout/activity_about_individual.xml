@@ -10,9 +10,9 @@
     tools:context=".AboutIndividualActivity">
 
         <ImageView
-            android:id="@+id/jorgito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/creators_img"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="@dimen/dp200"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:src="@drawable/comida"/>

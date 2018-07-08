@@ -90,5 +90,5 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             Precio =itemView.findViewById(R.id.txt_precio);
             ComidaImg = itemView.findViewById(R.id.img_comida);
         }
-    }
+    } 
 }

@@ -22,40 +22,44 @@ public class AboutIndividualActivity extends AppCompatActivity {
     ImageView foto_crea;
     ImageView gmail;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_individual);
 
-        nombre = findViewById(R.id.txt_nombre_creador);
-        carrera = findViewById(R.id.txt_carrera_creador);
-        git = findViewById(R.id.txt_git_creador);
-        email = findViewById(R.id.txt_email_creador);
-        foto_crea = findViewById(R.id.img_creador);
-        gmail = findViewById(R.id.img_git);
-
         String nomb = getIntent().getStringExtra("nomb");
         String career = getIntent().getStringExtra("carrera");
         String git_ = getIntent().getStringExtra("git");
         final String mail = getIntent().getStringExtra("email");
-        nombre.setText(nomb);
-        carrera.setText(career);
-        git.setText(git_);
 
-        /*switch (nomb){
+        nombre = findViewById(R.id.txt_nombre_creador);
+        carrera = findViewById(R.id.txt_carrera_creador);
+        git = findViewById(R.id.txt_git_creador);
+        email = findViewById(R.id.txt_email_creador);
+        gmail = findViewById(R.id.img_git);
+        foto_crea=findViewById(R.id.creators_img);
+
+        switch (nomb){
             case "Miguel Gonzalez":
-                foto_crea.setImageResource(R.drawable.comida);
+                foto_crea.setImageResource(R.drawable.miguel);
                 break;
             case "Marlene Barahona":
-                foto_crea.setImageResource(R.drawable.comida);
+                foto_crea.setImageResource(R.drawable.marlene);
                 break;
             case "Sara Romero":
-                foto_crea.setImageResource(R.drawable.comida);
+                foto_crea.setImageResource(R.drawable.sara);
                 break;
             case "Jorge Franco":
                 foto_crea.setImageResource(R.drawable.jorge);
                 break;
-        }*/
+        }
+
+        nombre.setText(nomb);
+        carrera.setText(career);
+        git.setText(git_);
+
+
 
         gmail.setOnClickListener(new View.OnClickListener() {
             @Override
