@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewCreadores;
@@ -14,6 +15,7 @@ public class AboutIndividualActivity extends AppCompatActivity {
     TextView carrera;
     TextView git;
     TextView email;
+    ImageView foto_crea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +26,16 @@ public class AboutIndividualActivity extends AppCompatActivity {
         carrera = findViewById(R.id.txt_carrera_creador);
         git = findViewById(R.id.txt_git_creador);
         email = findViewById(R.id.txt_email_creador);
+        foto_crea = findViewById(R.id.img_creador);
         String nomb = getIntent().getStringExtra("nomb");
         String career = getIntent().getStringExtra("carrera");
         String git_ = getIntent().getStringExtra("git");
         String mail = getIntent().getStringExtra("email");
-        //int foto = getIntent().getIntExtra("img");
+        //int foto = getIntent().getIntExtra("img",1);
         nombre.setText(nomb);
         carrera.setText(career);
         git.setText(git_);
         email.setText(mail);
+        //foto_crea.setImageResource(foto);
     }
 }

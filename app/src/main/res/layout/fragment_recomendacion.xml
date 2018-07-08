@@ -15,7 +15,7 @@
         android:id="@+id/recomDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recomendacion del dia"
+        android:text="Recomendacion random"
         android:textSize="30dp"
         android:textColor="#000"
         android:layout_centerHorizontal="true"/>

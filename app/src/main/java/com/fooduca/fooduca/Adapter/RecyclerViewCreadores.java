@@ -37,7 +37,7 @@ public class RecyclerViewCreadores extends RecyclerView.Adapter<RecyclerViewCrea
         view = inflater.inflate(R.layout.cardview_creador, parent, false);
         return new MyViewHolder(view);
     }
-
+    //holi :3
     @Override
     public void onBindViewHolder(final RecyclerViewCreadores.MyViewHolder holder, final int position) {
             holder.nom_crea.setText(creadores.get(position).getNombre());

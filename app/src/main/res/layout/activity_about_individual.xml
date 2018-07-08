@@ -5,39 +5,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/nose"
+    android:layout_margin="8dp"
+    android:layout_centerVertical="true"
     tools:context=".AboutIndividualActivity">
+
         <ImageView
-            android:id="@+id/img_creador"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+            android:id="@+id/jorgito"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
         <TextView
             android:id="@+id/txt_nombre_creador"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:textColor="#000"
+            android:textSize="32sp"
             android:text="Nombre"/>
+
         <TextView
             android:id="@+id/txt_carrera_creador"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:text="Carrera"/>
-        <TextView
-            android:id="@+id/txt_git_creador"
-            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:textColor="#333"
+            android:textSize="24sp"
+            android:text="Ingeniero Informatico"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:text="Git"/>
-        <TextView
-            android:id="@+id/txt_email_creador"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    app:srcCompat="@drawable/github" />
+
+                <TextView
+                    android:id="@+id/txt_git_creador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:text="git"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/git"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:text="Email"/>
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    app:srcCompat="@drawable/gmail" />
+
+                <TextView
+                    android:id="@+id/txt_email_creador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:text="git"/>
+
+        </LinearLayout>
 
 </LinearLayout>
