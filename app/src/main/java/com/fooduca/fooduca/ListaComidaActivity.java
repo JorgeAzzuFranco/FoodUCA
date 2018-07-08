@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -61,7 +62,15 @@ public class ListaComidaActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         int width = metrics.widthPixels;
         imaRes = findViewById(R.id.img_restaurante_individual);
-        imaRes.getLayoutParams().width = width/3;
+        freeTea = findViewById(R.id.te_id);
+
+
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+        }
+        else{
+            imaRes.getLayoutParams().width = width/3;
+            freeTea.getLayoutParams().width = width/3;
+        }
 
         rv = findViewById(R.id.myrv);
         rv.setHasFixedSize(true);
@@ -81,8 +90,6 @@ public class ListaComidaActivity extends AppCompatActivity {
 
         //Te gratis
         if(tea){
-            freeTea = findViewById(R.id.te_id);
-            freeTea.getLayoutParams().width = width/3;
             freeTea.setText("Todos los platillos incluyen te");
         }
 
