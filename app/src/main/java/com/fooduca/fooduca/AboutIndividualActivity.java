@@ -58,8 +58,7 @@ public class AboutIndividualActivity extends AppCompatActivity {
         nombre.setText(nomb);
         carrera.setText(career);
         git.setText(git_);
-
-
+        email.setText(mail);
 
         gmail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +74,6 @@ public class AboutIndividualActivity extends AppCompatActivity {
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Escribe aquí tu mensaje");
                 try {
                     startActivity(Intent.createChooser(emailIntent, "Enviar email..."));
-                    finish();
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(getApplicationContext(),
                             "No tienes clientes de email instalados.", Toast.LENGTH_SHORT).show();
