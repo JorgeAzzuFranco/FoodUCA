@@ -202,8 +202,7 @@ public class Data {
         comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o nachos", 2.00, R.drawable.cf_cheesemeat));
         comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.cf_que_bonito));
         comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.cf_papas));
-
-
+        comidas.add(new Comida("Crazy Food", "Crazy combinado + papas o nachos", 3.50, R.drawable.ep_pechugas_pollo));
         comidas.add(new Comida("Delicias Do Brasil", "Dedito de Queso", 1.00, R.drawable.ddb_dedito_queso));
         comidas.add(new Comida("Delicias Do Brasil", "Sandwich",R.drawable.ddb_sandwich));
         comidas.add(new Comida("Delicias Do Brasil", "Empanizado de salchicha",R.drawable.ddb_dedito_queso));
