@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
         }
         else{
-            img.setImageResource(R.drawable.holi_dos);
+            img.setImageResource(R.drawable.hello_dos);
+            img.setScaleType(ImageView.ScaleType.FIT_XY);
         }
 
         img.setOnClickListener(new View.OnClickListener() {
