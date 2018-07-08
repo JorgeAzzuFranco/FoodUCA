@@ -30,6 +30,8 @@
             android:layout_gravity="bottom|end"
             android:textStyle="bold"
             android:background="#bee6e3e3"
+            android:padding="4dp"
+            android:textAlignment="center"
             android:text=""/>
 
     </FrameLayout>

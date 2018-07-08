@@ -63,10 +63,6 @@ public class ListaComidaActivity extends AppCompatActivity {
         imaRes = findViewById(R.id.img_restaurante_individual);
         imaRes.getLayoutParams().width = width/3;
 
-
-
-
-
         rv = findViewById(R.id.myrv);
         rv.setHasFixedSize(true);
         glm = new GridLayoutManager(this, 2);
@@ -87,7 +83,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         if(tea){
             freeTea = findViewById(R.id.te_id);
             freeTea.getLayoutParams().width = width/3;
-            freeTea.setText("*Todos los platillos incluyen te* ");
+            freeTea.setText("Todos los platillos incluyen te");
         }
 
         //Floating menu
