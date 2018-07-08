@@ -31,4 +31,6 @@
     <string name="no_fb">has no fb</string>
     <string name="redirigiendo_pag">Redirecting to page of</string>
     <string name="incluye_te">*All dishes include tea*</string>
+    <string name="buscar">search</string>
+
 </resources>

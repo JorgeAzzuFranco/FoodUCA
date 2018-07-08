@@ -57,6 +57,6 @@
         android:padding="@dimen/fab_margin"
         android:textAlignment="center"
         android:textSize="@dimen/standard_23"
-        android:text="@string/bienvenido_a_b_squeda_por_precio_por_favor_ingresa_el_precio_m_nimo_y_m_ximo_que_estas_dispuesto_a_gastar"/>
+        android:text="@string/bbbusquedas"/>
 
 </RelativeLayout>

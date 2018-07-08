@@ -85,8 +85,8 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
                 public void onClick(View v) {
                     String rest;
                     rest=comidas.get(getAdapterPosition()).getNombre_restaurante();
-                    if(rest == "Pronto..."){
-                        if (comidas.get(getAdapterPosition()).getNombre_comida() == "Escribemos ;)"){
+                    if(rest.equals("Pronto...")){
+                        if (comidas.get(getAdapterPosition()).getNombre_comida().equals("Escribemos ;)")){
                             String[] TO = {"fooduca.soporte@gmail.com"};
                             String[] CC = {""};
                             Intent emailIntent = new Intent(Intent.ACTION_SEND);
