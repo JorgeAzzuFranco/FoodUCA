@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -62,6 +63,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         banner_view = findViewById(R.id.img_restaurante_individual);
         banner = datos.getInt("img");
         tea = datos.getBoolean("te");
+        //datos.getDouble("min");
 
         banner_view.setImageResource(banner);
 
@@ -100,7 +102,10 @@ public class ListaComidaActivity extends AppCompatActivity {
                 if (obtenerig != null) {
                     Uri uri = Uri.parse(obtenerig);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
+                    Intent chooser = Intent.createChooser(intent, "pedo");
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(chooser);
+                    }
                 }else {
                     Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
                 }
@@ -112,10 +117,16 @@ public class ListaComidaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CloseFabMenu();
                 String obtenerfb = datos.getString("fb");
+                String obtenerfbid = datos.getString("fbid");
                 if (obtenerfb != null) {
-                    Uri uri = Uri.parse(obtenerfb);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
+                    try {
+                        Uri uri1 = Uri.parse(obtenerfbid);
+                        startActivity(new Intent(Intent.ACTION_VIEW, uri1));
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(),"App no instalada",Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse(obtenerfb);
+                        startActivity(new Intent(Intent.ACTION_VIEW, uri2));
+                    }
                 }else {
                     Toast.makeText(getApplicationContext(), "Este Restaurante no posee fb",Toast.LENGTH_LONG).show();
                 }
