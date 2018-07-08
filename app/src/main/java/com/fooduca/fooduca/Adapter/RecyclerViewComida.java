@@ -53,7 +53,11 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
         if(comidas != null){
             Comida current = comidas.get(position);
             holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
-            holder.Precio.setText(String.format("$%.2f", comidas.get(position).getPrecio()));
+            if(comidas.get(position).getPrecio()==0){
+                holder.Precio.setText("$X.XX");
+            }else{
+                holder.Precio.setText(String.format("$%.2f", comidas.get(position).getPrecio()));
+            }
             holder.ComidaImg.setImageResource(comidas.get(position).getComidaImg());
             //holder.Nombre_restaurante.setText(comidas.get(position).getNombre_restaurante());
         }
@@ -76,7 +80,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             Nombre_comida = itemView.findViewById(R.id.txt_nombre_comida);
             Precio =itemView.findViewById(R.id.txt_precio);
             ComidaImg = itemView.findViewById(R.id.img_comida);
-            btn_fav = itemView.findViewById(R.id.imgbtn_fav);
+
             //Nombre_restaurante = itemView.findViewById(R.id.txt_nombre_restaurante);
         }
     }

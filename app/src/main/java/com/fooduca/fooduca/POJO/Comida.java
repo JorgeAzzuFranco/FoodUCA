@@ -24,6 +24,11 @@ public class Comida {
         this.precio = precio;
         this.ComidaImg = ComidaImg;
 
+    }public Comida(String nombre_restaurante, String nombre_comida,int ComidaImg) {
+        this.nombre_restaurante = nombre_restaurante;
+        this.nombre_comida = nombre_comida;
+        this.ComidaImg = ComidaImg;
+
     }
 
     public int getIdCom() {

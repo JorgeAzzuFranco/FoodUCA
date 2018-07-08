@@ -195,15 +195,20 @@ public class Data {
         comidas.add(new Comida("Kissitos", "Pie kissitos dulce de leche + fresas + banano + brownie", 1.00, R.drawable.tmb_pie_manzana));
 
 
-        comidas.add(new Comida("Crazy Food", "Crazy wrap + papas o nachos", 2.75, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Crazy torta + papas o nachos", 2.75, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Crazy pechus + papas o nachos", 2.75, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Fritito + papas o nachos", 1.50, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Cheese meat + papas o nachos", 3.00, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o nachos", 2.00, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.comida));
-        comidas.add(new Comida("Crazy Food", "Crazy combinado + papas o nachos", 3.50, R.drawable.comida));
+        comidas.add(new Comida("Crazy Food", "Crazy wrap + papas o nachos", 2.75, R.drawable.cf_wrap));
+        comidas.add(new Comida("Crazy Food", "Crazy torta + papas o nachos", 2.75, R.drawable.jl_torta));
+        comidas.add(new Comida("Crazy Food", "Crazy pechus + papas o nachos", 2.75, R.drawable.cf_pechus));
+        comidas.add(new Comida("Crazy Food", "Fritito + papas o nachos", 1.50, R.drawable.cf_frititos));
+        comidas.add(new Comida("Crazy Food", "Cheese meat + papas o nachos", 3.00, R.drawable.cf_cheesemeat));
+        comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o nachos", 2.00, R.drawable.cf_cheesemeat));
+        comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.cf_que_bonito));
+        comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.cf_papas));
+
+
+        comidas.add(new Comida("Delicias Do Brasil", "Dedito de Queso", 1.00, R.drawable.ddb_dedito_queso));
+        comidas.add(new Comida("Delicias Do Brasil", "Sandwich",R.drawable.ddb_sandwich));
+        comidas.add(new Comida("Delicias Do Brasil", "Empanizado de salchicha",R.drawable.ddb_dedito_queso));
+        comidas.add(new Comida("Delicias Do Brasil", "Coxinha",R.drawable.ddb_coxinha));
         this.comidas = comidas;
     }
 
@@ -218,19 +223,7 @@ public class Data {
         resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"fb://page/247675158608761","https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
         resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
         resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,"fb://page/348256351921709","https://www.facebook.com/kissitos/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_kissitos_dos,true));
-
-        //resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,R.drawable.logo_kissitos_dos,true));
         resPea.add(new Restaurante("Pronto...",R.drawable.log,R.drawable.holi,false));
-//        resPea.add(new Restaurante("Loreto's",R.drawable.logo_loretos,"https://www.facebook.com/LoretosSV/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_loretos_dos,true));
-//        resPea.add(new Restaurante("Jugolandia",R.drawable.logo_jugolandia, "https://www.facebook.com/JUGOLANDIA-123221487688654/", null,R.drawable.logo_jugolandia_dos,false));
-//        resPea.add(new Restaurante("The Mixed\n Brothers",R.drawable.logo_mixed_brothers, "https://www.facebook.com/tmbsv.1/", "https://www.instagram.com/themixedbrotherssv/?hl=es-la",R.drawable.logo_mixed_brothers_dos,false));
-//        resPea.add(new Restaurante("Pepper Jack",R.drawable.logo_pepper_jack,"https://www.facebook.com/PepperJk/", "https://www.instagram.com/pepperjackoficial/?hl=es-la",R.drawable.logo_pepper_jack_dos,false));
-//        resPea.add(new Restaurante("Crazy Food",R.drawable.logo_crazy_food, "https://www.facebook.com/CRAZY-FOOD-237071819662957/", null,R.drawable.logo_crazy_food_dos, true));
-//        resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
-//        resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
-//        resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
-//        resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,R.drawable.logo_kissitos_dos,true));
-//        resPea.add(new Restaurante("Pronto...",R.drawable.log,R.drawable.holi,false));
         return resPea;
     }
 
