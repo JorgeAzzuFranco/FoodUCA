@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast= Toast.makeText(getApplicationContext(), "^ Pulsa aquí para conocer más", Toast.LENGTH_SHORT);
+                Toast toast= Toast.makeText(getApplicationContext(), "^  Pulsa aquí para conocer más", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 85);
                 toast.show();
                 //Toast.makeText(getApplicationContext(), "^ Pulsa aquí para conocer mas",Toast.LENGTH_SHORT).setGravity(Gravity.TOP| Gravity.RIGHT, 50, 50);

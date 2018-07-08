@@ -204,16 +204,17 @@ public class Data {
         comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o\n nachos", 2.00, R.drawable.cf_cheesemeat));
         comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.cf_que_bonito));
         comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.cf_papas));
+        comidas.add(new Comida("Crazy Food", "Crazy combinado + papas o nachos", 3.50, R.drawable.ep_pechugas_pollo));
 
         comidas.add(new Comida("Delicias Do Brasil", "Dedito de Queso", 1.00, R.drawable.ddb_dedito_queso));
         comidas.add(new Comida("Delicias Do Brasil", "Empanizado de salchicha",R.drawable.ddb_dedito_queso));
         comidas.add(new Comida("Delicias Do Brasil", "Sandwich",R.drawable.ddb_sandwich));
         comidas.add(new Comida("Delicias Do Brasil", "Coxinha",R.drawable.ddb_coxinha));
 
-        comidas.add(new Comida("Pronto...","1",R.drawable.comida));
-        comidas.add(new Comida("Pronto...","2",R.drawable.comida));
-        comidas.add(new Comida("Pronto...","3",R.drawable.comida));
-        comidas.add(new Comida("Pronto...","4",R.drawable.comida));
+        comidas.add(new Comida("Pronto...","Escribemos ;)",0,R.drawable.prox_uno));
+        comidas.add(new Comida("Pronto...","¿Cuál será?",0,R.drawable.prox_dos));
+        comidas.add(new Comida("Pronto...","¿Lo sabes tu?",0,R.drawable.prox_tres));
+        comidas.add(new Comida("Pronto...","Feliz día :3",0,R.drawable.prox_cuatro));
         this.comidas = comidas;
     }
 
@@ -228,7 +229,7 @@ public class Data {
         resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"fb://page/247675158608761","https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
         resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
         resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,"fb://page/348256351921709","https://www.facebook.com/kissitos/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_kissitos_dos,true));
-        resPea.add(new Restaurante("Pronto...",R.drawable.log,R.drawable.holi,false));
+        resPea.add(new Restaurante("Pronto...",R.drawable.logo_prox,null,"https://www.instagram.com/fooduca/?hl=es-la",R.drawable.logo_prox_dos,false));
         return resPea;
     }
 
