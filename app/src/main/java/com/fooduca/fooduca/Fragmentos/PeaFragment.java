@@ -1,6 +1,7 @@
 package com.fooduca.fooduca.Fragmentos;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -43,8 +44,12 @@ public class PeaFragment extends Fragment {
 
         recycler = view.findViewById(R.id.Recyclerview_restaurantes_pea);
         recycler.setHasFixedSize(true);
-        glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
-
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
+        }
+        else{
+            glm = new GridLayoutManager(getContext().getApplicationContext(), 4);
+        }
         recycler.setLayoutManager(glm);
 
         rvadapter = new RecyclerViewRestaurantes(getContext(),datos.getResPea());
