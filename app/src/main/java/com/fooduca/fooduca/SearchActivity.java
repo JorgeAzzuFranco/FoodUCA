@@ -41,10 +41,10 @@ public class SearchActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), max_alv,Toast.LENGTH_SHORT).show();
 
                 //Palma con el intent
-                //Intent intent = new Intent(getApplicationContext(), ListaComidaActivity.class);
+                Intent intent = new Intent(getApplicationContext(), login.class);
                 //intent.putExtra("min", pre_min);
                 //intent.putExtra("max", pre_max);
-                //startActivity(intent);
+                startActivity(intent);
             }
         });
     }
