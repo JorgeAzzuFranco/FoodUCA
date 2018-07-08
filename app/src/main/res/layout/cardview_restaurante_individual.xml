@@ -19,7 +19,7 @@
             android:id="@+id/img_restaurante_individual"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:src="@drawable/restaurante"
+            android:src="@drawable/logo_dos"
             android:foregroundGravity="center"
             android:scaleType="centerCrop"/>
         <TextView

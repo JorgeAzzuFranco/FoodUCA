@@ -31,7 +31,7 @@ public class ListaComidaActivity extends AppCompatActivity {
 
     RecyclerView rv;
     GridLayoutManager glm;
-    String restau;
+    Double min, max;
     boolean tea;
     RecyclerViewComida comidaAdapter;
     ImageView btn_fb;
@@ -63,70 +63,82 @@ public class ListaComidaActivity extends AppCompatActivity {
         banner = datos.getInt("img");
         tea = datos.getBoolean("te");
 
-        banner_view.setImageResource(banner);
+        min = datos.getDouble("min");
+        max = datos.getDouble("max");
 
-        comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
+        fabMain = findViewById(R.id.fab_main);
+
+        if(max != 0.0){
+            comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getSearch(min,max));
+            fabMain.setVisibility(View.INVISIBLE);
+        }else{
+            Log.d("HOLA","hola si entro aqui pero no hago nada");
+            comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
+            banner_view.setImageResource(banner);
+            //Te gratis
+            if(tea){
+                freeTea = findViewById(R.id.te_id);
+                freeTea.setText("*Todos los platillos incluyen te* ");
+            }
+
+            //Floating menu
+            fabFb = findViewById(R.id.fab_fb);
+            bgFabMenu = findViewById(R.id.bg_fab_menu);
+            fabIg = findViewById(R.id.fab_ig);
+
+
+            fabMain.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(!isFabOpen){
+                        ShowFabMenu();
+                    }else {
+                        CloseFabMenu();
+                    }
+                }
+            });
+            fabIg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CloseFabMenu();
+                    String obtenerig = datos.getString("ig");
+                    if (obtenerig != null) {
+                        Uri uri = Uri.parse(obtenerig);
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            });
+            fabFb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CloseFabMenu();
+                    String obtenerfb = datos.getString("fb");
+                    if (obtenerfb != null) {
+                        Uri uri = Uri.parse(obtenerfb);
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Este Restaurante no posee fb",Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+            bgFabMenu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CloseFabMenu();
+                }
+            });
+        }
+
+
         rv.setLayoutManager(glm);
         rv.setAdapter(comidaAdapter);
 
-        //Te gratis
-        if(tea){
-            freeTea = findViewById(R.id.te_id);
-            freeTea.setText("*Todos los platillos incluyen te* ");
-        }
 
-        //Floating menu
-        fabFb = findViewById(R.id.fab_fb);
-        bgFabMenu = findViewById(R.id.bg_fab_menu);
-        fabMain = findViewById(R.id.fab_main);
-        fabIg = findViewById(R.id.fab_ig);
-
-
-        fabMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!isFabOpen){
-                    ShowFabMenu();
-                }else {
-                    CloseFabMenu();
-                }
-            }
-        });
-        fabIg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CloseFabMenu();
-                String obtenerig = datos.getString("ig");
-                if (obtenerig != null) {
-                    Uri uri = Uri.parse(obtenerig);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                }else {
-                    Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
-        fabFb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CloseFabMenu();
-                String obtenerfb = datos.getString("fb");
-                if (obtenerfb != null) {
-                    Uri uri = Uri.parse(obtenerfb);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                }else {
-                    Toast.makeText(getApplicationContext(), "Este Restaurante no posee fb",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        bgFabMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CloseFabMenu();
-            }
-        });
     }
 
     private void CloseFabMenu() {
