@@ -26,11 +26,12 @@
     <string name="volver">BACK</string>
     <string name="salir">EXIT</string>
     <string name="conoce">^  Press here to know more</string>
-    <string name="redirige">Redirecting to instagram of</string>
+    <string name="redirige">Redirecting to instagram of </string>
     <string name="no_ig">has no ig</string>
     <string name="no_fb">has no fb</string>
-    <string name="redirigiendo_pag">Redirecting to page of</string>
+    <string name="redirigiendo_pag">Redirecting to the fb page of </string>
     <string name="incluye_te">*All dishes include tea*</string>
     <string name="buscar">search</string>
-
+    <string name="encuentrame">Find me in: </string>
+    <string name="pronto">Soon…</string>
 </resources>
