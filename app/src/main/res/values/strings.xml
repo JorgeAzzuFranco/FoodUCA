@@ -21,4 +21,10 @@
     <string name="precio_m_ximo">Precio máximo:</string>
     <string name="costo_m_ximo_a_gastar">Costo máximo a gastar</string>
     <string name="bbbusquedas">Bienvenido a búsqueda por precio, por favor ingresa el precio mínimo y máximo que estas dispuesto a gastar</string>
+    <string name="precio_m_nimo">Precio mínimo:</string>
+    <string name="costo_m_nimo_a_gastar">Costo mínimo a gastar</string>
+    <string name="precio_m_ximo">Precio máximo:</string>
+    <string name="costo_m_ximo_a_gastar">Costo máximo a gastar</string>
+    <string name="buscar">Buscar</string>
+    <string name="bienvenido_a_b_squeda_por_precio_por_favor_ingresa_el_precio_m_nimo_y_m_ximo_que_estas_dispuesto_a_gastar">Bienvenido a búsqueda por precio, por favor ingresa el precio mínimo y máximo que estas dispuesto a gastar</string>
 </resources>
