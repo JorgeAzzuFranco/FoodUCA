@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/img_creador"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dp200"
             android:background="#FFFFFF"
             android:src="@drawable/comida"
             android:layout_gravity="center"/>

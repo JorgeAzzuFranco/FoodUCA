@@ -33,16 +33,29 @@ public class AboutIndividualActivity extends AppCompatActivity {
         email = findViewById(R.id.txt_email_creador);
         foto_crea = findViewById(R.id.img_creador);
         gmail = findViewById(R.id.img_git);
+
         String nomb = getIntent().getStringExtra("nomb");
         String career = getIntent().getStringExtra("carrera");
         String git_ = getIntent().getStringExtra("git");
         final String mail = getIntent().getStringExtra("email");
-        //int foto = getIntent().getIntExtra("img",1);
         nombre.setText(nomb);
         carrera.setText(career);
         git.setText(git_);
-        email.setText(mail);
-        //foto_crea.setImageResource(foto);
+
+        /*switch (nomb){
+            case "Miguel Gonzalez":
+                foto_crea.setImageResource(R.drawable.comida);
+                break;
+            case "Marlene Barahona":
+                foto_crea.setImageResource(R.drawable.comida);
+                break;
+            case "Sara Romero":
+                foto_crea.setImageResource(R.drawable.comida);
+                break;
+            case "Jorge Franco":
+                foto_crea.setImageResource(R.drawable.jorge);
+                break;
+        }*/
 
         gmail.setOnClickListener(new View.OnClickListener() {
             @Override
