@@ -17,8 +17,21 @@ public class Comida {
     private double precio;
 //    @ColumnInfo(name = "comidaImg")
     private int ComidaImg;
+    private String tipo;
 
-    public Comida(String nombre_restaurante, String nombre_comida, double precio,int ComidaImg) {
+    public Comida(){
+
+    }
+
+    public Comida(String nombre_restaurante, String nombre_comida, double precio, int comidaImg, String tipo) {
+        this.nombre_restaurante = nombre_restaurante;
+        this.nombre_comida = nombre_comida;
+        this.precio = precio;
+        ComidaImg = comidaImg;
+        this.tipo = tipo;
+    }
+
+    public Comida(String nombre_restaurante, String nombre_comida, double precio, int ComidaImg) {
         this.nombre_restaurante = nombre_restaurante;
         this.nombre_comida = nombre_comida;
         this.precio = precio;
@@ -69,5 +82,13 @@ public class Comida {
 
     public void setComidaImg(int ComidaImg) {
         ComidaImg = ComidaImg;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

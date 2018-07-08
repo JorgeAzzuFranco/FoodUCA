@@ -52,6 +52,7 @@ public class AboutFragment extends Fragment {
 
         recycler = view.findViewById(R.id.Recyclerview_creadores);
         recycler.setHasFixedSize(true);
+
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
         }
@@ -59,6 +60,7 @@ public class AboutFragment extends Fragment {
             glm = new GridLayoutManager(getContext().getApplicationContext(), 4);
             view.setBackgroundResource(R.drawable.holi_dos);
         }
+
         recycler.setLayoutManager(glm);
 
         //rvadapter = new RecyclerViewRestaurantes(getContext(),datos.getResPea());

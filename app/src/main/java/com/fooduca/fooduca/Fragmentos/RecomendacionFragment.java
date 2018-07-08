@@ -2,8 +2,10 @@ package com.fooduca.fooduca.Fragmentos;
 
 
 import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +46,12 @@ public class RecomendacionFragment extends Fragment {
         nombrePlato = view.findViewById(R.id.txt_nombre_comida);
         nombreRest = view.findViewById(R.id.txt_nombre_restaurante);
         precio = view.findViewById(R.id.txt_precio);
+
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+        }
+        else{
+            view.setBackgroundResource(R.drawable.holi_dos);
+        }
 
         random = datos.randomItem();
 
