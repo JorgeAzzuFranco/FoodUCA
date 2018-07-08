@@ -263,10 +263,10 @@ public class Data {
     }
 
     public ArrayList<Creadores> getCreadores() {
-        creadores.add(new Creadores("Miguel Gonzalez","MickeyMiguel","Ing informatica","Miguel@uca",R.drawable.comida));
+        creadores.add(new Creadores("Miguel Gonzalez","MickeyMiguel97","Ing informatica","Miguel@uca",R.drawable.comida));
         creadores.add(new Creadores("Marlene Barahona","MarleneBarahona","Ing informatica","Marlene@uca",R.drawable.comida));
         creadores.add(new Creadores("Sara Romero","SaraRom","Ing informatica","Sara@uca",R.drawable.comida));
-        creadores.add(new Creadores("Jorge Franco","JorgeAzzu","Ing informatica","Jorge@uca",R.drawable.comida));
+        creadores.add(new Creadores("Jorge Franco","JorgeAzzuFranco","Ing informatica","Jorge@uca",R.drawable.comida));
         return creadores;
     }
 

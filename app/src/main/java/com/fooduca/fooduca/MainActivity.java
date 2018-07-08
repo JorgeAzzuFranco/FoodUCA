@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
 import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
+import com.fooduca.fooduca.Fragmentos.AboutFragment;
 import com.fooduca.fooduca.Fragmentos.MasRicosFragment;
 import com.fooduca.fooduca.Fragmentos.PeaFragment;
 import com.fooduca.fooduca.Fragmentos.ProceresFragment;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         ProceresFragment.OnNavigationItemSelectedListener,
         SultanaFragment.OnNavigationItemSelectedListener,
         RecomendacionFragment.OnNavigationItemSelectedListener,
+        AboutFragment.OnNavigationItemSelectedListener,
         MasRicosFragment.OnNavigationItemSelectedListener{
 
     List<Comida> comidas;
@@ -186,7 +188,8 @@ public class MainActivity extends AppCompatActivity
             }
             seleccionado = true;
         } else if (id == R.id.nav_marlene) {
-
+            fragment = new AboutFragment();
+            seleccionado = true;
         }else if (id == R.id.nav_jorge) {
 
         }else if (id == R.id.nav_miguel) {
