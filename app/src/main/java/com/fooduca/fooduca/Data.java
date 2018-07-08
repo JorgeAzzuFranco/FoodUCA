@@ -77,10 +77,10 @@ public class Data {
         comidas.add(new Comida("Pepper Jack", "Burger Jack Lover", 3.99, R.drawable.ppj_jack_lover, "comida"));
         comidas.add(new Comida("Pepper Jack", "Burger Magna7", 3.99, R.drawable.ppj_burger_magna_7, "comida"));
         //desde
-        comidas.add(new Comida("The Mixed\n Brothers", "Brownie con\ntopping", 1.50, R.drawable.tmb_brownie_topping, "comida"));
-        comidas.add(new Comida("The Mixed\n Brothers", "Flan de caramelo", 1.50, R.drawable.tmb_flan, "comida"));
-        comidas.add(new Comida("The Mixed\n Brothers", "Brownie\nTradicional\n(con azúcar glass)", 1.00, R.drawable.tmb_brownie, "comida"));
-        comidas.add(new Comida("The Mixed\n Brothers", "Brownie\nRed Velvet\n(con azúcar glass)", 1.00, R.drawable.tmb_brownie_red, "comida"));
+        comidas.add(new Comida("The Mixed\n Brothers", "Brownie con\ntopping", 1.50, R.drawable.tmb_brownie_topping));
+        comidas.add(new Comida("The Mixed\n Brothers", "Flan de caramelo", 1.50, R.drawable.tmb_flan));
+        comidas.add(new Comida("The Mixed\n Brothers", "Brownie\nTradicional\n(con azúcar glass)", 1.00, R.drawable.tmb_brownie));
+        comidas.add(new Comida("The Mixed\n Brothers", "Brownie\nRed Velvet\n(con azúcar glass)", 1.00, R.drawable.tmb_brownie_red));
         comidas.add(new Comida("The Mixed\n Brothers", "Pizza grandota\n(10 piezas)", 12.00, R.drawable.tmb_pizza, "comida"));
         comidas.add(new Comida("The Mixed\n Brothers", "Panini en combo", 3.50, R.drawable.tmb_panini_combo, "comida"));
         comidas.add(new Comida("The Mixed\n Brothers", "Cheesecake", 1.50, R.drawable.tmb_cheesecake, "comida"));
@@ -264,8 +264,8 @@ public class Data {
     }
 
     public ArrayList<Creadores> getCreadores() {
-        creadores.add(new Creadores("Miguel Gonzalez","MickeyMiguel97","Ing informatico","00145016@uca.edu.sv",R.drawable.comida));
-        creadores.add(new Creadores("Marlene Barahona","MarleneBarahona","Ing informatica","00118616@uca.edu.sv",R.drawable.comida));
+        creadores.add(new Creadores("Miguel Gonzalez","MickeyMiguel97","Ing informatico","00145016@uca.edu.sv",R.drawable.miguel));
+        creadores.add(new Creadores("Marlene Barahona","MarleneBarahona","Ing informatica","00118616@uca.edu.sv",R.drawable.marlene));
         creadores.add(new Creadores("Sara Romero","SaraRom","Ing informatica","00030716@uca.edu.sv",R.drawable.comida));
         creadores.add(new Creadores("Jorge Franco","JorgeAzzuFranco","Ing informatico","00074216@uca.edu.sv",R.drawable.jorge));
         return creadores;
@@ -273,13 +273,22 @@ public class Data {
 
     public Comida randomItem(){
         Comida random = new Comida();
-        do {
+
             try {
                 random = comidas.get(new Random().nextInt(comidas.size()));
+                if (random.getTipo() == null) {
+
+                }
+                else{
+                    do {
+                        random = comidas.get(new Random().nextInt(comidas.size()));
+                    }while (random.getTipo() != null);
+                }
+                Log.d("Error", random.getNombre_comida()+" "+random.getNombre_restaurante());
             }catch (Exception e){
-                Log.d("ERROR", "Hubo un mal valor");
+
             }
-        }while (!random.getTipo().equals("comida"));
+
         return random;
 
     }
