@@ -80,7 +80,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             Nombre_comida = itemView.findViewById(R.id.txt_nombre_comida);
             Precio =itemView.findViewById(R.id.txt_precio);
             ComidaImg = itemView.findViewById(R.id.img_comida);
-            btn_fav = itemView.findViewById(R.id.imgbtn_fav);
+
             //Nombre_restaurante = itemView.findViewById(R.id.txt_nombre_restaurante);
         }
     }
