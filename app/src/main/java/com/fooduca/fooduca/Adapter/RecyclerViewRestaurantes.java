@@ -13,9 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fooduca.fooduca.ListaComidaActivity;
+import com.fooduca.fooduca.POJO.Creadores;
 import com.fooduca.fooduca.POJO.Restaurante;
 import com.fooduca.fooduca.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewRestaurantes.MyViewHolder>{
@@ -29,7 +31,7 @@ public class RecyclerViewRestaurantes extends RecyclerView.Adapter<RecyclerViewR
 
     @Override
     public int getItemCount(){
-        return restaurantes.size();
+            return restaurantes.size();
     }
 
     @NonNull
