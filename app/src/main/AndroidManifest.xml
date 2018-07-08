@@ -19,15 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login">
-
-        </activity>
-        <activity android:name=".ListaComidaActivity">
-
-        </activity>
-        <activity android:name=".SearchActivity">
-
-        </activity>
+        <activity android:name=".login" />
+        <activity android:name=".ListaComidaActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".AboutIndividualActivity"></activity>
     </application>
 
 </manifest>

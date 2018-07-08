@@ -20,8 +20,6 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
     private List<Comida> comidas;
     private Context miContexto;
 
-
-
     public RecyclerViewComida(Context miContexto, List<Comida> comida){
         this.miContexto = miContexto;
         this.comidas = comida;

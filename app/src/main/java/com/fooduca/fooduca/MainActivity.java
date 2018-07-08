@@ -1,17 +1,10 @@
 package com.fooduca.fooduca;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,17 +15,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-import com.fooduca.fooduca.Adapter.RecyclerViewComida;
-import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
+import com.fooduca.fooduca.Fragmentos.AboutFragment;
 import com.fooduca.fooduca.Fragmentos.MasRicosFragment;
 import com.fooduca.fooduca.Fragmentos.PeaFragment;
 import com.fooduca.fooduca.Fragmentos.ProceresFragment;
 import com.fooduca.fooduca.Fragmentos.RecomendacionFragment;
 import com.fooduca.fooduca.Fragmentos.SultanaFragment;
 import com.fooduca.fooduca.POJO.Comida;
-import com.fooduca.fooduca.POJO.Restaurante;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -43,7 +33,9 @@ public class MainActivity extends AppCompatActivity
         ProceresFragment.OnNavigationItemSelectedListener,
         SultanaFragment.OnNavigationItemSelectedListener,
         RecomendacionFragment.OnNavigationItemSelectedListener,
-        MasRicosFragment.OnNavigationItemSelectedListener{
+        AboutFragment.OnNavigationItemSelectedListener,
+        MasRicosFragment.OnNavigationItemSelectedListener
+        {
 
     List<Comida> comidas;
     Fragment fragment = null;
@@ -171,7 +163,8 @@ public class MainActivity extends AppCompatActivity
             }
             seleccionado = true;
         } else if (id == R.id.nav_marlene) {
-
+            fragment = new AboutFragment();
+            seleccionado = true;
         }else if (id == R.id.nav_jorge) {
 
         }else if (id == R.id.nav_miguel) {

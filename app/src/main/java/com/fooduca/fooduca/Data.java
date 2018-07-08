@@ -3,6 +3,7 @@ package com.fooduca.fooduca;
 import android.util.Log;
 
 import com.fooduca.fooduca.POJO.Comida;
+import com.fooduca.fooduca.POJO.Creadores;
 import com.fooduca.fooduca.POJO.Restaurante;
 
 import java.lang.reflect.Array;
@@ -16,6 +17,7 @@ public class Data {
     ArrayList<Restaurante> resProceres = new ArrayList<>();
     ArrayList<Restaurante> resPea = new ArrayList<>();
     ArrayList<Comida> comidas;
+    ArrayList<Creadores> creadores = new ArrayList<>();
 
     public Data() {
         comidas = new ArrayList<>();
@@ -261,6 +263,14 @@ public class Data {
             }
         }
         return menu;
+    }
+
+    public ArrayList<Creadores> getCreadores() {
+        creadores.add(new Creadores("Miguel Gonzalez","MickeyMiguel","Ing informatica","Miguel@uca",R.drawable.comida));
+        creadores.add(new Creadores("Marlene Barahona","MarleneBarahona","Ing informatica","Marlene@uca",R.drawable.comida));
+        creadores.add(new Creadores("Sara Romero","SaraRom","Ing informatica","Sara@uca",R.drawable.comida));
+        creadores.add(new Creadores("Jorge Franco","JorgeAzzu","Ing informatica","Jorge@uca",R.drawable.comida));
+        return creadores;
     }
 
     public Comida randomItem(){
