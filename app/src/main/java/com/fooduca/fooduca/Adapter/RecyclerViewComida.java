@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fooduca.fooduca.POJO.Comida;
 import com.fooduca.fooduca.R;
@@ -19,7 +20,6 @@ import java.util.List;
 public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.MyViewHolder>{
     private List<Comida> comidas;
     private Context miContexto;
-
 
 
     public RecyclerViewComida(Context miContexto, List<Comida> comida){
@@ -65,23 +65,30 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             holder.Nombre_comida.setText("No hay comida");
         }
 
+
+
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder{
         TextView Nombre_comida;
         ImageView ComidaImg;
         TextView Precio;
         ImageButton btn_fav;
-        //TextView Nombre_restaurante;
 
         public MyViewHolder(View itemView){
             super(itemView);
-
+            View view = itemView;
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String rest;
+                    rest=comidas.get(getAdapterPosition()).getNombre_restaurante();
+                    Toast.makeText(miContexto,"Encuentráme en: "+rest,Toast.LENGTH_SHORT).show();
+                }
+            });
             Nombre_comida = itemView.findViewById(R.id.txt_nombre_comida);
             Precio =itemView.findViewById(R.id.txt_precio);
             ComidaImg = itemView.findViewById(R.id.img_comida);
-
-            //Nombre_restaurante = itemView.findViewById(R.id.txt_nombre_restaurante);
         }
     }
 }
