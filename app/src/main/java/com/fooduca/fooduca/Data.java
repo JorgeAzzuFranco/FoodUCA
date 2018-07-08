@@ -228,7 +228,7 @@ public class Data {
         resPea.add(new Restaurante("El Portalito",R.drawable.logo_portalito,R.drawable.logo_portalito_dos,true));
         resPea.add(new Restaurante("Delicias Do Brasil",R.drawable.logo_delicias_do_brasil,"fb://page/247675158608761","https://www.facebook.com/deliciasdobrasil.sv/",null,R.drawable.logo_delicias_do_brasil_dos,false));
         resPea.add(new Restaurante("koko",R.drawable.logo_koko,R.drawable.logo_koko_dos,true));
-        resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,"fb://page/348256351921709","https://www.facebook.com/kissitos/","https://www.instagram.com/loretossv/?hl=es-la",R.drawable.logo_kissitos_dos,true));
+        resPea.add(new Restaurante("Kissitos",R.drawable.logo_kissitos,"fb://page/348256351921709","https://www.facebook.com/kissitos/","https://www.instagram.com/kissitosbistro/",R.drawable.logo_kissitos_dos,true));
         resPea.add(new Restaurante("Pronto...",R.drawable.logo_prox,null,"https://www.instagram.com/fooduca/?hl=es-la",R.drawable.logo_prox_dos,false));
         return resPea;
     }
