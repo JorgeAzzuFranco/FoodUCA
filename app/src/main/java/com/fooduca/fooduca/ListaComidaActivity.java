@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.RotateAnimation;
@@ -47,13 +48,24 @@ public class ListaComidaActivity extends AppCompatActivity {
     FloatingActionButton fabFb;
     FloatingActionButton fabIg;
     View bgFabMenu;
+    ImageView imaRes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cardview_restaurante_individual);
         final Bundle datos = this.getIntent().getExtras();
-        //restau = datos.getString("com");
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        imaRes = findViewById(R.id.img_restaurante_individual);
+        imaRes.getLayoutParams().width = width/3;
+
+
+
+
+
         rv = findViewById(R.id.myrv);
         rv.setHasFixedSize(true);
         glm = new GridLayoutManager(this, 2);
@@ -72,6 +84,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         //Te gratis
         if(tea){
             freeTea = findViewById(R.id.te_id);
+            freeTea.getLayoutParams().width = width/3;
             freeTea.setText("*Todos los platillos incluyen te* ");
         }
 

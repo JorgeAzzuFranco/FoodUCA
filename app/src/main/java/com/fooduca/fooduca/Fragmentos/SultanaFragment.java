@@ -1,6 +1,7 @@
 package com.fooduca.fooduca.Fragmentos;
 
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -41,7 +42,14 @@ public class SultanaFragment extends Fragment {
 
         recycler = view.findViewById(R.id.Recyclerview_restaurantes_sultana);
         recycler.setHasFixedSize(true);
-        glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
+
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            glm = new GridLayoutManager(getContext().getApplicationContext(), 2);
+        }
+        else{
+            glm = new GridLayoutManager(getContext().getApplicationContext(), 4);
+        }
+
         recycler.setLayoutManager(glm);
 
         rvadapter = new RecyclerViewRestaurantes(getContext(),datos.getResSultana());
