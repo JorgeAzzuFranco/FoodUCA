@@ -35,7 +35,7 @@
                 android:id="@+id/txt_precio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Precio: $0.00"
+                android:text="Precio: $X.XX"
                 android:layout_gravity="center"
                 android:textColor="#000"
                 android:layout_marginTop="4dp"

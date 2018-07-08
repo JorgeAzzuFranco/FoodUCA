@@ -185,4 +185,5 @@ public class ListaComidaActivity extends AppCompatActivity {
         fabIg.animate().translationY(-300f).rotation(0f);
     }
 
+
 }
