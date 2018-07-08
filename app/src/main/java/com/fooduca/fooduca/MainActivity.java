@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity
 
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.bye)
-                    .setTitle(" ¿Te vas tan pronto?")
-                    .setMessage("Aun tienes muchos platillos por probar")
-                    .setNegativeButton("VOLVER", null)// sin listener
-                    .setPositiveButton("SALIR", new DialogInterface.OnClickListener() {// un listener que al pulsar, cierre la aplicacion
+                    .setTitle(R.string.te_vas)
+                    .setMessage(R.string.platillos_probar)
+                    .setNegativeButton(R.string.volver, null)// sin listener
+                    .setPositiveButton(R.string.salir, new DialogInterface.OnClickListener() {// un listener que al pulsar, cierre la aplicacion
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                     // Salir
@@ -84,15 +84,17 @@ public class MainActivity extends AppCompatActivity
         img = findViewById(R.id.holi);
 
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            img.setImageResource(R.drawable.hello);
         }
         else{
-            img.setImageResource(R.drawable.holi_dos);
+            img.setImageResource(R.drawable.hello_dos);
+
         }
 
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast= Toast.makeText(getApplicationContext(), "^  Pulsa aquí para conocer más", Toast.LENGTH_SHORT);
+                Toast toast= Toast.makeText(getApplicationContext(), R.string.conoce, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 85);
                 toast.show();
                 //Toast.makeText(getApplicationContext(), "^ Pulsa aquí para conocer mas",Toast.LENGTH_SHORT).setGravity(Gravity.TOP| Gravity.RIGHT, 50, 50);

@@ -55,10 +55,10 @@ public class AboutIndividualActivity extends AppCompatActivity {
                 break;
         }
 
+        email.setText(mail);
         nombre.setText(nomb);
         carrera.setText(career);
         git.setText(git_);
-        email.setText(mail);
 
         gmail.setOnClickListener(new View.OnClickListener() {
             @Override

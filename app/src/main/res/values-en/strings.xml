@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FOODUCA</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_lista_comida">ListaComidaActivity</string>
+    <string name="nombre">Name</string>
+    <string name="precio_0_00"> </string>
+    <string name="redesSociales">Social media</string>
+    <string name="nombre_comida">Nombre_Comida</string>
+    <string name="lugar_comida">Lugar_Comida</string>
+    <string name="precio_comida">Precio_Comida</string>
+    <string name="correo">fooduca.soporte@gmail.com</string>
+    <string name="precio_m_nimo">Minimum price:</string>
+    <string name="costo_m_nimo_a_gastar">Minimum price to spend</string>
+    <string name="precio_m_ximo">Maximum price:</string>
+    <string name="costo_m_ximo_a_gastar">Maximum price to spend</string>
+    <string name="bbbusquedas">Welcome to search by price, please enter the minimum and maximum price that you are willing to spend</string>
+    <string name="platillos_probar">You still have a lot of dishes to try</string>
+    <string name="te_vas">Leaving so soon?</string>
+    <string name="volver">BACK</string>
+    <string name="salir">EXIT</string>
+    <string name="conoce">^  Press here to know more</string>
+    <string name="redirige">Redirecting to instagram of</string>
+    <string name="no_ig">has no ig</string>
+    <string name="no_fb">has no fb</string>
+    <string name="redirigiendo_pag">Redirecting to page of</string>
+    <string name="incluye_te">*All dishes include tea*</string>
+</resources>

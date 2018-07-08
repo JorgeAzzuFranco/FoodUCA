@@ -90,12 +90,11 @@ public class ListaComidaActivity extends AppCompatActivity {
             comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getSearch(min,max));
             fabMain.setVisibility(View.INVISIBLE);
         }else{
-            Log.d("HOLA","hola si entro aqui pero no hago nada");
             comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
             banner_view.setImageResource(banner);
             //Te gratis
             if(tea){
-                freeTea.setText("*Todos los platillos incluyen te* ");
+                freeTea.setText(R.string.incluye_te);
             }
 
             //Floating menu
@@ -121,12 +120,12 @@ public class ListaComidaActivity extends AppCompatActivity {
                 String obtenerig = datos.getString("ig");
                 String obtenernomb = datos.getString("com");
                 if (obtenerig != null) {
-                    Toast.makeText(getApplicationContext(), "Redirigiendo a instagram de "+obtenernomb,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.redirige)+obtenernomb,Toast.LENGTH_LONG).show();
                     Uri uri = Uri.parse(obtenerig);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }else {
-                    Toast.makeText(getApplicationContext(), obtenernomb+" no posee ig",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), obtenernomb+getString(R.string.no_ig),Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -140,7 +139,7 @@ public class ListaComidaActivity extends AppCompatActivity {
                 String obtenernomb = datos.getString("com");
                 if (obtenerfb != null) {
                     try {
-                        Toast.makeText(getApplicationContext(), "Redirigiendo a pagina de "+obtenernomb,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.redirigiendo_pag)+obtenernomb,Toast.LENGTH_LONG).show();
                         Uri uri1 = Uri.parse(obtenerfbid);
                         startActivity(new Intent(Intent.ACTION_VIEW, uri1));
                     } catch (Exception e) {
@@ -149,7 +148,7 @@ public class ListaComidaActivity extends AppCompatActivity {
                         startActivity(new Intent(Intent.ACTION_VIEW, uri2));
                     }
                 }else {
-                    Toast.makeText(getApplicationContext(), obtenernomb+" no posee fb",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), obtenernomb+getString(R.string.no_fb),Toast.LENGTH_LONG).show();
                 }
             }
         });

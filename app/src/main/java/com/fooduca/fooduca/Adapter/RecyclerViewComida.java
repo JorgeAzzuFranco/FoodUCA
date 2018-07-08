@@ -56,7 +56,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
             Comida current = comidas.get(position);
             holder.Nombre_comida.setText(comidas.get(position).getNombre_comida());
             if(comidas.get(position).getPrecio()==0){
-                holder.Precio.setText("$X.XX");
+                holder.Precio.setText("");
             }else{
                 holder.Precio.setText(String.format("$%.2f", comidas.get(position).getPrecio()));
             }
@@ -97,7 +97,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
                             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto");
                             emailIntent.putExtra(Intent.EXTRA_TEXT, "Escribe aquí tu mensaje");
                             try {
-                                miContexto.startActivity(Intent.createChooser(emailIntent, "Enviar email..."));
+                                 miContexto.startActivity(Intent.createChooser(emailIntent, "Enviar email..."));
                             } catch (android.content.ActivityNotFoundException ex) {
                                 Toast.makeText(miContexto,
                                         "No tienes clientes de email instalados.", Toast.LENGTH_SHORT).show();
