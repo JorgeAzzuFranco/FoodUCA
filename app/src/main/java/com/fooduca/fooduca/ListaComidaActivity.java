@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.RotateAnimation;
@@ -47,13 +49,20 @@ public class ListaComidaActivity extends AppCompatActivity {
     FloatingActionButton fabFb;
     FloatingActionButton fabIg;
     View bgFabMenu;
+    ImageView imaRes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cardview_restaurante_individual);
         final Bundle datos = this.getIntent().getExtras();
-        //restau = datos.getString("com");
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        imaRes = findViewById(R.id.img_restaurante_individual);
+        imaRes.getLayoutParams().width = width/3;
+
         rv = findViewById(R.id.myrv);
         rv.setHasFixedSize(true);
         glm = new GridLayoutManager(this, 2);
@@ -87,52 +96,61 @@ public class ListaComidaActivity extends AppCompatActivity {
             fabIg = findViewById(R.id.fab_ig);
 
 
-            fabMain.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(!isFabOpen){
-                        ShowFabMenu();
-                    }else {
-                        CloseFabMenu();
-                    }
-                }
-            });
-            fabIg.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        fabMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!isFabOpen){
+                    ShowFabMenu();
+                }else {
                     CloseFabMenu();
-                    String obtenerig = datos.getString("ig");
-                    if (obtenerig != null) {
-                        Uri uri = Uri.parse(obtenerig);
-                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                        startActivity(intent);
-                    }else {
-                        Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        fabIg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CloseFabMenu();
+                String obtenerig = datos.getString("ig");
+                if (obtenerig != null) {
+                    Uri uri = Uri.parse(obtenerig);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    Intent chooser = Intent.createChooser(intent, "pedo");
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(chooser);
                     }
+                }else {
+                    Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
+                }
 
-                }
-            });
-            fabFb.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    CloseFabMenu();
-                    String obtenerfb = datos.getString("fb");
-                    if (obtenerfb != null) {
-                        Uri uri = Uri.parse(obtenerfb);
-                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                        startActivity(intent);
-                    }else {
-                        Toast.makeText(getApplicationContext(), "Este Restaurante no posee fb",Toast.LENGTH_LONG).show();
+            }
+        });
+        fabFb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CloseFabMenu();
+                String obtenerfb = datos.getString("fb");
+                String obtenerfbid = datos.getString("fbid");
+                if (obtenerfb != null) {
+                    try {
+                        Uri uri1 = Uri.parse(obtenerfbid);
+                        startActivity(new Intent(Intent.ACTION_VIEW, uri1));
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(),"App no instalada",Toast.LENGTH_SHORT).show();
+                        Uri uri2 = Uri.parse(obtenerfb);
+                        startActivity(new Intent(Intent.ACTION_VIEW, uri2));
                     }
+                }else {
+                    Toast.makeText(getApplicationContext(), "Este Restaurante no posee fb",Toast.LENGTH_LONG).show();
                 }
-            });
-            bgFabMenu.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    CloseFabMenu();
-                }
-            });
-        }
+            }
+        });
+        bgFabMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CloseFabMenu();
+            }
+        });
+    }
 
 
         rv.setLayoutManager(glm);
