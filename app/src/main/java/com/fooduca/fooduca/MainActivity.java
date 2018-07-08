@@ -84,11 +84,10 @@ public class MainActivity extends AppCompatActivity
         img = findViewById(R.id.holi);
 
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            img.setImageResource(R.drawable.hello);
         }
         else{
             img.setImageResource(R.drawable.hello_dos);
-
+            img.setScaleType(ImageView.ScaleType.FIT_XY);
         }
 
         img.setOnClickListener(new View.OnClickListener() {

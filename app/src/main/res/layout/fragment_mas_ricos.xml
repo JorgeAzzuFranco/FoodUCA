@@ -9,9 +9,9 @@
         android:id="@+id/pm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Precio mínimo: "
+        android:text="@string/precio_m_nimo"
         android:textSize="@dimen/standard_23"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/dp70"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"/>
     <EditText
@@ -19,44 +19,44 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/pm"
         android:layout_width="wrap_content"
-        android:hint=" Costo mínimo a gastar "
+        android:hint="@string/costo_m_nimo_a_gastar"
         android:layout_height="wrap_content"
         android:inputType="number"/>
     <TextView
         android:id="@+id/pmm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Precio máximo: "
-        android:layout_marginTop="150dp"
+        android:text="@string/precio_m_ximo"
+        android:layout_marginTop="@dimen/dp150"
         android:layout_centerHorizontal="true"
         android:textSize="@dimen/standard_23"
         android:textAlignment="center"/>
     <EditText
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="@dimen/dp180"
         android:id="@+id/precio_max"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint=" Costo máximo a gastar "
+        android:hint="@string/costo_m_ximo_a_gastar"
         />
     <Button
         android:id="@+id/search_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
-        android:layout_marginLeft="155dp"
-        android:text="Buscar"
+        android:layout_marginTop="@dimen/dp230"
+        android:layout_marginLeft="@dimen/dp155"
+        android:text="@string/buscar"
         android:textAlignment="center" />
     <TextView
-        android:layout_marginVertical="300dp"
+        android:layout_marginVertical="@dimen/dp300"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_height="wrap_content"
         android:padding="@dimen/fab_margin"
         android:textAlignment="center"
         android:textSize="@dimen/standard_23"
-        android:text="Bienvenido a búsqueda por precio, por favor ingresa el precio mínimo y máximo que estas dispuesto a gastar"/>
+        android:text="@string/bienvenido_a_b_squeda_por_precio_por_favor_ingresa_el_precio_m_nimo_y_m_ximo_que_estas_dispuesto_a_gastar"/>
 
 </RelativeLayout>

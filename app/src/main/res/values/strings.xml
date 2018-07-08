@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_lista_comida">ListaComidaActivity</string>
     <string name="nombre">Nombre</string>
@@ -30,4 +31,5 @@
     <string name="no_fb">no posee fb</string>
     <string name="redirigiendo_pag">Redirigiendo a pagina de</string>
     <string name="incluye_te">*Todos los platillos incluyen te*</string>
+
 </resources>
