@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/uno"
-            android:title="Recomendacion del día" />
+            android:title="Recomendacion random" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/dos"
