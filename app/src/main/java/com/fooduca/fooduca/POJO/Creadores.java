@@ -3,9 +3,11 @@ package com.fooduca.fooduca.POJO;
 public class Creadores {
     String nombre;
     String git;
+    String urlgit;
     String carrera;
     int foto;
     String email;
+
 
     public Creadores(String nombre, String git, String carrera, String email, int foto) {
         this.nombre = nombre;
