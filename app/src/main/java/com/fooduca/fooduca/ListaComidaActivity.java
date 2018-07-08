@@ -5,7 +5,6 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -34,7 +33,7 @@ public class ListaComidaActivity extends AppCompatActivity {
 
     RecyclerView rv;
     GridLayoutManager glm;
-    String restau;
+    Double min, max;
     boolean tea;
     RecyclerViewComida comidaAdapter;
     ImageView btn_fb;
@@ -62,15 +61,7 @@ public class ListaComidaActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         int width = metrics.widthPixels;
         imaRes = findViewById(R.id.img_restaurante_individual);
-        freeTea = findViewById(R.id.te_id);
-
-
-        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-        }
-        else{
-            imaRes.getLayoutParams().width = width/3;
-            freeTea.getLayoutParams().width = width/3;
-        }
+        imaRes.getLayoutParams().width = width/3;
 
         rv = findViewById(R.id.myrv);
         rv.setHasFixedSize(true);
@@ -80,24 +71,29 @@ public class ListaComidaActivity extends AppCompatActivity {
         banner_view = findViewById(R.id.img_restaurante_individual);
         banner = datos.getInt("img");
         tea = datos.getBoolean("te");
-        //datos.getDouble("min");
 
-        banner_view.setImageResource(banner);
+        min = datos.getDouble("min");
+        max = datos.getDouble("max");
 
-        comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
-        rv.setLayoutManager(glm);
-        rv.setAdapter(comidaAdapter);
-
-        //Te gratis
-        if(tea){
-            freeTea.setText("Todos los platillos incluyen te");
-        }
-
-        //Floating menu
-        fabFb = findViewById(R.id.fab_fb);
-        bgFabMenu = findViewById(R.id.bg_fab_menu);
         fabMain = findViewById(R.id.fab_main);
-        fabIg = findViewById(R.id.fab_ig);
+
+        if(max != 0.0){
+            comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getSearch(min,max));
+            fabMain.setVisibility(View.INVISIBLE);
+        }else{
+            Log.d("HOLA","hola si entro aqui pero no hago nada");
+            comidaAdapter = new RecyclerViewComida(getApplicationContext(), data.getComidas(datos.getString("com")));
+            banner_view.setImageResource(banner);
+            //Te gratis
+            if(tea){
+                freeTea = findViewById(R.id.te_id);
+                freeTea.setText("*Todos los platillos incluyen te* ");
+            }
+
+            //Floating menu
+            fabFb = findViewById(R.id.fab_fb);
+            bgFabMenu = findViewById(R.id.bg_fab_menu);
+            fabIg = findViewById(R.id.fab_ig);
 
 
         fabMain.setOnClickListener(new View.OnClickListener() {
@@ -154,6 +150,13 @@ public class ListaComidaActivity extends AppCompatActivity {
                 CloseFabMenu();
             }
         });
+    }
+
+
+        rv.setLayoutManager(glm);
+        rv.setAdapter(comidaAdapter);
+
+
     }
 
     private void CloseFabMenu() {

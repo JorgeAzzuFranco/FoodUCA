@@ -268,4 +268,14 @@ public class Data {
         return random;
     }
 
+    public ArrayList<Comida> getSearch(double min, double max){
+        ArrayList<Comida> search = new ArrayList<>();
+        for(int i=0;i<comidas.size();i++){
+            if(comidas.get(i).getPrecio() <max && comidas.get(i).getPrecio()>min){
+                search.add(comidas.get(i));
+            }
+        }
+        return search;
+    }
+
 }

@@ -26,25 +26,32 @@ public class SearchActivity extends AppCompatActivity {
 
         min = findViewById(R.id.precio_min);
         max = findViewById(R.id.precio_max);
-        search = findViewById(R.id.search_btn);
+        search = findViewById(R.id.search_btn1);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                if (!min.getText().toString().equals("")&&!max.getText().toString().equals("")){
                 min_alv = min.getText().toString();
                 max_alv = max.getText().toString();
-//                Integer pre_min = Integer.valueOf(min_alv);
-//                Integer pre_max = Integer.valueOf(max_alv);
-                Double pre_min = Double.valueOf(min_alv);
-                Double pre_max = Double.valueOf(max_alv);
-                Toast.makeText(getApplicationContext(), min_alv,Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), max_alv,Toast.LENGTH_SHORT).show();
-
-                //Palma con el intent
-                Intent intent = new Intent(getApplicationContext(), login.class);
-                //intent.putExtra("min", pre_min);
-                //intent.putExtra("max", pre_max);
-                startActivity(intent);
+                    if(Double.valueOf(max_alv)>0.0) {
+                        //Palma con el intent
+                        Double pre_min = Double.valueOf(min_alv);
+                        Double pre_max = Double.valueOf(max_alv);
+                        if(pre_max>pre_min) {
+                            Intent intent = new Intent(getApplicationContext(), ListaComidaActivity.class);
+                            intent.putExtra("min", pre_min);
+                            intent.putExtra("max", pre_max);
+                            startActivity(intent);
+                        }else {
+                            Toast.makeText(getApplicationContext(), "Valor máximo debe ser mayor que el mínimo",Toast.LENGTH_SHORT).show();
+                        }
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Por favor ingresa un valor máximo mayor a 0",Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Toast.makeText(getApplicationContext(), "Datos incompletos",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
