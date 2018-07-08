@@ -266,7 +266,7 @@ public class Data {
     public ArrayList<Creadores> getCreadores() {
         creadores.add(new Creadores("Miguel Gonzalez","MickeyMiguel97","Ing informatico","00145016@uca.edu.sv",R.drawable.miguel));
         creadores.add(new Creadores("Marlene Barahona","MarleneBarahona","Ing informatica","00118616@uca.edu.sv",R.drawable.marlene));
-        creadores.add(new Creadores("Sara Romero","SaraRom","Ing informatica","00030716@uca.edu.sv",R.drawable.sara));
+        creadores.add(new Creadores("Sara Romero","Sararom","Ing informatica","00030716@uca.edu.sv",R.drawable.sara));
         creadores.add(new Creadores("Jorge Franco","JorgeAzzuFranco","Ing informatico","00074216@uca.edu.sv",R.drawable.jorge));
         return creadores;
     }

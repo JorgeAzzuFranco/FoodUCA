@@ -119,12 +119,14 @@ public class ListaComidaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CloseFabMenu();
                 String obtenerig = datos.getString("ig");
+                String obtenernomb = datos.getString("com");
                 if (obtenerig != null) {
+                    Toast.makeText(getApplicationContext(), "Redirigiendo a instagram de "+obtenernomb,Toast.LENGTH_LONG).show();
                     Uri uri = Uri.parse(obtenerig);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);
                 }else {
-                    Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), obtenernomb+" no posee ig",Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -135,8 +137,10 @@ public class ListaComidaActivity extends AppCompatActivity {
                 CloseFabMenu();
                 String obtenerfb = datos.getString("fb");
                 String obtenerfbid = datos.getString("fbid");
+                String obtenernomb = datos.getString("com");
                 if (obtenerfb != null) {
                     try {
+                        Toast.makeText(getApplicationContext(), "Redirigiendo a pagina de "+obtenernomb,Toast.LENGTH_LONG).show();
                         Uri uri1 = Uri.parse(obtenerfbid);
                         startActivity(new Intent(Intent.ACTION_VIEW, uri1));
                     } catch (Exception e) {
@@ -145,7 +149,7 @@ public class ListaComidaActivity extends AppCompatActivity {
                         startActivity(new Intent(Intent.ACTION_VIEW, uri2));
                     }
                 }else {
-                    Toast.makeText(getApplicationContext(), "Este Restaurante no posee fb",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), obtenernomb+" no posee fb",Toast.LENGTH_LONG).show();
                 }
             }
         });
