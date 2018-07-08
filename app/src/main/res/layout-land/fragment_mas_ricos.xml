@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lupa"
+    android:layout_margin="@dimen/dp4">
+
+    <TextView
+        android:id="@+id/mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/standard_23"
+        android:text="@string/bbbusquedas"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp4"
+        android:textColor="@color/negro"/>
+
+    <TextView
+        android:id="@+id/pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/precio_m_nimo"
+        android:textSize="@dimen/standard_23"
+        android:layout_below="@+id/mensaje"
+        android:textColor="@color/negro"/>
+
+    <EditText
+        android:id="@+id/precio_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/costo_m_nimo_a_gastar"
+        android:inputType="number"
+        android:layout_below="@+id/mensaje"
+        android:layout_toRightOf="@+id/pm"
+        android:layout_marginLeft="@dimen/dp4" />
+
+    <TextView
+        android:id="@+id/pmm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/precio_m_ximo"
+        android:layout_below="@+id/precio_min"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp4"
+        android:textSize="@dimen/standard_23"
+        android:textColor="@color/negro"
+        />
+
+    <EditText
+        android:id="@+id/precio_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/costo_m_ximo_a_gastar"
+        android:layout_below="@+id/pm"
+        android:layout_toRightOf="@+id/pmm"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_alignBaseline="@+id/pmm"/>
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_below="@+id/pmm"
+        android:layout_marginTop="@dimen/dp4"/>
+</RelativeLayout>

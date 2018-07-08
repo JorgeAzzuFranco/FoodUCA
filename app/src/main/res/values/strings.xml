@@ -7,7 +7,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_lista_comida">ListaComidaActivity</string>
     <string name="nombre">Nombre</string>
@@ -17,4 +16,9 @@
     <string name="lugar_comida">Lugar_Comida</string>
     <string name="precio_comida">Precio_Comida</string>
     <string name="correo">fooduca.soporte@gmail.com</string>
+    <string name="precio_m_nimo">Precio mínimo:</string>
+    <string name="costo_m_nimo_a_gastar">Costo mínimo a gastar</string>
+    <string name="precio_m_ximo">Precio máximo:</string>
+    <string name="costo_m_ximo_a_gastar">Costo máximo a gastar</string>
+    <string name="bbbusquedas">Bienvenido a búsqueda por precio, por favor ingresa el precio mínimo y máximo que estas dispuesto a gastar</string>
 </resources>
