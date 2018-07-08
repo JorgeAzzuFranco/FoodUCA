@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
     android:orientation="vertical"
     android:layout_margin="4dp"
     android:id="@+id/cardview_restaurante">
@@ -16,7 +19,6 @@
             android:id="@+id/img_restaurante"
             android:layout_width="wrap_content"
             android:layout_height="160dp"
-            android:background="#FFFFFF"
             android:src="@drawable/comida"
             android:layout_gravity="center"/>
 
