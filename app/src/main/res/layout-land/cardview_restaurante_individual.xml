@@ -18,7 +18,7 @@
         >
         <ImageView
             android:id="@+id/img_restaurante_individual"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp0"
             android:layout_height="match_parent"
             android:src="@drawable/restaurante"
             android:foregroundGravity="center"
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:textStyle="bold"
-            android:background="#bee6e3e3"
-            android:padding="4dp"
+            android:background="@color/grisito"
+            android:padding="@dimen/dp4"
             android:textAlignment="center"
             android:text=""/>
 
@@ -40,8 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toRightOf="@+id/presentacion"
-        android:layout_marginRight="4dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginRight="@dimen/dp4"
+        android:layout_marginLeft="@dimen/dp4"
         >
 
         <android.support.v7.widget.RecyclerView
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"
-            android:layout_margin="4dp">
+            android:layout_margin="@dimen/dp4">
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 </RelativeLayout>
@@ -59,7 +59,7 @@
         android:id="@+id/bg_fab_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#48000000"
+        android:background="@color/negroOpaco"
         android:alpha="0"
         android:visibility="gone"
         />
@@ -96,7 +96,7 @@
         android:layout_margin="@dimen/fab_margin"
         app:fabSize="normal"
         android:src="@drawable/share"
-        android:tooltipText="Redes Sociales"
+        android:tooltipText="@string/redesSociales"
         />
 
 </android.support.design.widget.CoordinatorLayout>

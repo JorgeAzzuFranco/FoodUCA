@@ -50,6 +50,7 @@ public class ProceresFragment extends Fragment {
         }
         else{
             glm = new GridLayoutManager(getContext().getApplicationContext(), 4);
+            view.setBackgroundResource(R.drawable.holi_dos);
         }
 
         recycler.setLayoutManager(glm);

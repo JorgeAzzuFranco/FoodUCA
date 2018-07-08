@@ -3,4 +3,10 @@
     <color name="colorPrimary">#D77500</color>
     <color name="colorPrimaryDark">#D77500</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="negro">#000</color>
+    <color name="beige">#C19A6B</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="gris">#bee6e3e3</color>
+    <color name="negroOpaco">#48000000</color>
+    <color name="grisito">#bee6e3e3</color>
 </resources>
