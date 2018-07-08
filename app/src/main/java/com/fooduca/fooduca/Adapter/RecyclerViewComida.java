@@ -86,23 +86,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
                     String rest;
                     rest=comidas.get(getAdapterPosition()).getNombre_restaurante();
                     if(rest.equals("Pronto...")){
-                        if (comidas.get(getAdapterPosition()).getNombre_comida().equals("Escribemos ;)")){
-                            String[] TO = {"fooduca.soporte@gmail.com"};
-                            String[] CC = {""};
-                            Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                            emailIntent.setData(Uri.parse("mailto:"));
-                            emailIntent.setType("text/plain");
-                            emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-                            emailIntent.putExtra(Intent.EXTRA_CC, CC);
-                            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto");
-                            emailIntent.putExtra(Intent.EXTRA_TEXT, "Escribe aquí tu mensaje");
-                            try {
-                                 miContexto.startActivity(Intent.createChooser(emailIntent, "Enviar email..."));
-                            } catch (android.content.ActivityNotFoundException ex) {
-                                Toast.makeText(miContexto,
-                                        "No tienes clientes de email instalados.", Toast.LENGTH_SHORT).show();
-                            }
-                        }else Toast.makeText(miContexto,rest,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(miContexto,rest,Toast.LENGTH_SHORT).show();
                     }else Toast.makeText(miContexto,"Encuentráme en: "+rest,Toast.LENGTH_SHORT).show();
                 }
             });
