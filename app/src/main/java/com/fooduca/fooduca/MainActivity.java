@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.fooduca.fooduca.Adapter.RecyclerViewComida;
 import com.fooduca.fooduca.Adapter.RecyclerViewRestaurantes;
@@ -83,6 +85,19 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ImageView img;
+
+        img = findViewById(R.id.holi);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast= Toast.makeText(getApplicationContext(), "^ Pulsa aquí para conocer más", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 85);
+                toast.show();
+                //Toast.makeText(getApplicationContext(), "^ Pulsa aquí para conocer mas",Toast.LENGTH_SHORT).setGravity(Gravity.TOP| Gravity.RIGHT, 50, 50);
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

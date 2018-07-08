@@ -4,6 +4,6 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="Los precios estan sujetos a cambios"
+        android:title="Gracias por descargar FOODUCA"
         app:showAsAction="never" />
 </menu>

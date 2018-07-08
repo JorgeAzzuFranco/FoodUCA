@@ -28,19 +28,19 @@ public class Data {
         //desde
         comidas.add(new Comida("El Portalito", "Waffles",1.50, R.drawable.ep_waffles));
         comidas.add(new Comida("El Portalito", "Wraps + lays", 2.50, R.drawable.ep_wrapp));
-        comidas.add(new Comida("El Portalito", "Pizza personal 1 Ingrediente", 3.00, R.drawable.tmb_pizza_personal));
+        comidas.add(new Comida("El Portalito", "Tacos tostados", 3.00, R.drawable.ep_tacos_tostados));
         comidas.add(new Comida("El Portalito", "Pan con ajo", 3.00, R.drawable.jl_pan_con_ajo));
         comidas.add(new Comida("El Portalito", "Palitroques", 3.00, R.drawable.ep_palitroques));
         comidas.add(new Comida("El Portalito", "Lasaña", 3.00, R.drawable.ep_lasagna));
+        comidas.add(new Comida("El Portalito", "Rica pizza \npara una \npersona de \nun ingrediente\n", 3.00, R.drawable.tmb_pizza_personal));
         comidas.add(new Comida("El Portalito", "Pechuguitas de pollo empanizadas + papas o ensalada", 3.00, R.drawable.ep_pechugas_pollo));
-        comidas.add(new Comida("El Portalito", "Tacos tostados", 3.00, R.drawable.ep_tacos_tostados));
         comidas.add(new Comida("El Portalito", "Carne a la plancha", 3.00, R.drawable.jl_carne_plancha));
         comidas.add(new Comida("El Portalito", "Baleada + papas fritas", 3.00, R.drawable.ep_baleada));
         comidas.add(new Comida("El Portalito", "Pizza super personal 2 Ingredientes ", 4.00, R.drawable.tmb_pizza_personal));
-        comidas.add(new Comida("El Portalito", "Pizza calzone 3 Ingredientes", 4.00, R.drawable.ep_pizza_calzone));
         comidas.add(new Comida("El Portalito", "Pizza mediana 8 porciones 3 Ingredientes", 6.00, R.drawable.ep_pizza_mediana));
         comidas.add(new Comida("El Portalito", "Pizza grande 10 porciones de 3 Ingredientes", 8.00, R.drawable.ep_pizza_grande));
         comidas.add(new Comida("El Portalito", "Pizza gigante 12 porciones de 3 Ingredientes", 10.00, R.drawable.ep_pizza_gigante));
+        comidas.add(new Comida("El Portalito", "Pizza calzone 3 Ingredientes", 4.00, R.drawable.ep_pizza_calzone));
         //desde es el licuado osea el de abajo
         comidas.add(new Comida("Jugolandia", "Licuados", 1.00, R.drawable.jl_licuado));
         comidas.add(new Comida("Jugolandia", "Frozen", 1.00, R.drawable.jl_frozen));
@@ -104,17 +104,17 @@ public class Data {
         comidas.add(new Comida("koko", "Papas fritas", 1.00, R.drawable.jl_papas));
         comidas.add(new Comida("koko", "Hot Dog", 1.00, R.drawable.jl_hot_dog));
         comidas.add(new Comida("koko", "Nachos + soda, jugo o té de lata", 1.50, R.drawable.kk_nachos));
-        comidas.add(new Comida("koko", "Hamburguesa", 1.50, R.drawable.jl_hamburguesa));
         comidas.add(new Comida("koko", "Hot Dog + papas fritas", 2.00, R.drawable.jl_hot_dog));
+        comidas.add(new Comida("koko", "Hamburguesa", 1.50, R.drawable.jl_hamburguesa));
         comidas.add(new Comida("koko", "Torta de carne", 2.00, R.drawable.jl_torta));
         comidas.add(new Comida("koko", "3 Alitas + papas fritas", 2.00, R.drawable.jl_alitas_de_pollo));
         comidas.add(new Comida("koko", "5 Nuggets + papas fritas", 2.00, R.drawable.kk_nuggets));
         comidas.add(new Comida("koko", "Hamburguesa + papas fritas", 2.50, R.drawable.jl_hamburguesa));
-        comidas.add(new Comida("koko", "Panini", 2.50, R.drawable.jl_panini));
         comidas.add(new Comida("koko", "Panini de jamón + papas fritas", 3.00, R.drawable.jl_panini));
+        comidas.add(new Comida("koko", "Panini", 2.50, R.drawable.jl_panini));
         comidas.add(new Comida("koko", "Pizza", 3.00, R.drawable.tmb_pizza_personal));
         comidas.add(new Comida("koko", "Pizza + pan con ajo", 3.50, R.drawable.tmb_pizza_personal));
-        comidas.add(new Comida("koko", "Pudding", 0.50, R.drawable.kk_pudding));
+        comidas.add(new Comida("koko", "Delicioso \npudding", 0.50, R.drawable.kk_pudding));
         comidas.add(new Comida("koko", "Yogurt", 0.75, R.drawable.kk_yogurt));
         comidas.add(new Comida("koko", "Muffin", 0.80, R.drawable.kk_muffing));
         comidas.add(new Comida("koko", "Café", 0.25, R.drawable.kk_cafe));
@@ -194,21 +194,24 @@ public class Data {
         comidas.add(new Comida("Kissitos", "Pie kissitos nutella + fresas + banano + brownie", 1.00, R.drawable.tmb_pie_manzana));
         comidas.add(new Comida("Kissitos", "Pie kissitos dulce de leche + fresas + banano + brownie", 1.00, R.drawable.tmb_pie_manzana));
 
-
         comidas.add(new Comida("Crazy Food", "Crazy wrap + papas o nachos", 2.75, R.drawable.cf_wrap));
         comidas.add(new Comida("Crazy Food", "Crazy torta + papas o nachos", 2.75, R.drawable.jl_torta));
         comidas.add(new Comida("Crazy Food", "Crazy pechus + papas o nachos", 2.75, R.drawable.cf_pechus));
         comidas.add(new Comida("Crazy Food", "Fritito + papas o nachos", 1.50, R.drawable.cf_frititos));
-        comidas.add(new Comida("Crazy Food", "Cheese meat + papas o nachos", 3.00, R.drawable.cf_cheesemeat));
-        comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o nachos", 2.00, R.drawable.cf_cheesemeat));
+        comidas.add(new Comida("Crazy Food", "Cheese meat\n + papas o \nnachos", 3.00, R.drawable.cf_cheesemeat));
+        comidas.add(new Comida("Crazy Food", "Mini cheese meat + papas o\n nachos", 2.00, R.drawable.cf_cheesemeat));
         comidas.add(new Comida("Crazy Food", "Que bonito + papas + nachos", 6.00, R.drawable.cf_que_bonito));
         comidas.add(new Comida("Crazy Food", "Papas señoritas Jr", 1.50, R.drawable.cf_papas));
 
-
         comidas.add(new Comida("Delicias Do Brasil", "Dedito de Queso", 1.00, R.drawable.ddb_dedito_queso));
-        comidas.add(new Comida("Delicias Do Brasil", "Sandwich",R.drawable.ddb_sandwich));
         comidas.add(new Comida("Delicias Do Brasil", "Empanizado de salchicha",R.drawable.ddb_dedito_queso));
+        comidas.add(new Comida("Delicias Do Brasil", "Sandwich",R.drawable.ddb_sandwich));
         comidas.add(new Comida("Delicias Do Brasil", "Coxinha",R.drawable.ddb_coxinha));
+
+        comidas.add(new Comida("Pronto...","1",R.drawable.comida));
+        comidas.add(new Comida("Pronto...","2",R.drawable.comida));
+        comidas.add(new Comida("Pronto...","3",R.drawable.comida));
+        comidas.add(new Comida("Pronto...","4",R.drawable.comida));
         this.comidas = comidas;
     }
 
