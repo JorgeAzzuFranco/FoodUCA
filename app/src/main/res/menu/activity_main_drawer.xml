@@ -25,21 +25,10 @@
     <item android:title="Conoce a los creadores">
         <menu>
             <item
-                android:id="@+id/nav_sara"
+                android:id="@+id/nav_creadores"
                 android:icon="@drawable/estrella"
-                android:title="Sara Romero" />
-            <item
-                android:id="@+id/nav_marlene"
-                android:icon="@drawable/estrella"
-                android:title="Marlene Barahona" />
-            <item
-                android:id="@+id/nav_jorge"
-                android:icon="@drawable/estrella"
-                android:title="Jorge Franco" />
-            <item
-                android:id="@+id/nav_miguel"
-                android:icon="@drawable/estrella"
-                android:title="Miguel González" />
+                android:title="Creadores" />
+
         </menu>
     </item>
 

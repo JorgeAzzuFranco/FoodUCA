@@ -122,10 +122,7 @@ public class ListaComidaActivity extends AppCompatActivity {
                 if (obtenerig != null) {
                     Uri uri = Uri.parse(obtenerig);
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    Intent chooser = Intent.createChooser(intent, "pedo");
-                    if (intent.resolveActivity(getPackageManager()) != null) {
-                        startActivity(chooser);
-                    }
+                    startActivity(intent);
                 }else {
                     Toast.makeText(getApplicationContext(), "Este restaurante no posee ig",Toast.LENGTH_LONG).show();
                 }
@@ -160,11 +157,8 @@ public class ListaComidaActivity extends AppCompatActivity {
         });
     }
 
-
         rv.setLayoutManager(glm);
         rv.setAdapter(comidaAdapter);
-
-
     }
 
     private void CloseFabMenu() {
