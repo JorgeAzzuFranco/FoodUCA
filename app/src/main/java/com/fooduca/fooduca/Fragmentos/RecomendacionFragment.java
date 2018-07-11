@@ -28,7 +28,7 @@ public class RecomendacionFragment extends Fragment {
     TextView nombrePlato;
     TextView precio;
     Comida random;
-
+    ImageView refresh;
 
     public RecomendacionFragment() {
         // Required empty public constructor
@@ -46,6 +46,7 @@ public class RecomendacionFragment extends Fragment {
         nombrePlato = view.findViewById(R.id.txt_nombre_comida);
         nombreRest = view.findViewById(R.id.txt_nombre_restaurante);
         precio = view.findViewById(R.id.txt_precio);
+        refresh = view.findViewById(R.id.bttn_refresh);
 
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
         }
@@ -59,7 +60,17 @@ public class RecomendacionFragment extends Fragment {
         nombrePlato.setText(random.getNombre_comida());
         nombreRest.setText(random.getNombre_restaurante());
         precio.setText(String.format("$%.2f", random.getPrecio()));
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                random = datos.randomItem();
 
+                imageView.setImageResource(random.getComidaImg());
+                nombrePlato.setText(random.getNombre_comida());
+                nombreRest.setText(random.getNombre_restaurante());
+                precio.setText(String.format("$%.2f", random.getPrecio()));
+            }
+        });
         return view;
     }
 

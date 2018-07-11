@@ -15,7 +15,7 @@
         android:id="@+id/recomDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atrevete a probarlo"
+        android:text="@string/atrevete_a_probarlo"
         android:textSize="30dp"
         android:textColor="#000"
         android:layout_centerHorizontal="true"/>
@@ -64,6 +64,12 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/txt_nombre_restaurante"
         android:layout_margin="8dp"/>
+     <ImageView
+         android:id="@+id/bttn_refresh"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:layout_margin="4dp"
+         android:src="@drawable/refresh"/>
 
 </RelativeLayout>
 </ScrollView>
