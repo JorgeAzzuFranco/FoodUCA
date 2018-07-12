@@ -208,10 +208,10 @@ public class Data {
 
         comidas.add(new Comida("Delicias Do Brasil", "Dedito de Queso", 1.00, R.drawable.ddb_dedito_queso, "comida"));
         comidas.add(new Comida("Delicias Do Brasil", "Empanizado de salchicha", 1.00,R.drawable.ddb_dedito_queso, "comida"));
-        comidas.add(new Comida("Delicias Do Brasil", "Sandwich", 1.75,R.drawable.ddb_sandwich, "comida"));
+        comidas.add(new Comida("Delicias Do Brasil", "Coxinha", 1.25,R.drawable.ddb_coxinha, "comida"));
         comidas.add(new Comida("Delicias Do Brasil", "Sandwich", 1.75,R.drawable.ddb_sandwich, "comida"));
         comidas.add(new Comida("Delicias Do Brasil", "Torta", 1.75,R.drawable.jl_torta, "comida"));
-        comidas.add(new Comida("Delicias Do Brasil", "Hamburguesa",1.25,R.drawable.jl_hamburguesa, "comida"));
+        comidas.add(new Comida("Delicias Do Brasil", "Hamburguesa",1.75,R.drawable.jl_hamburguesa, "comida"));
 
         comidas.add(new Comida("Pronto...","Escribemos ;)",0,R.drawable.prox_uno));
         comidas.add(new Comida("Pronto...","¿Cuál será?",0,R.drawable.prox_dos));
