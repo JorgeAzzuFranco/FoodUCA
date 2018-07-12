@@ -87,7 +87,7 @@ public class RecyclerViewComida extends RecyclerView.Adapter<RecyclerViewComida.
                     rest=comidas.get(getAdapterPosition()).getNombre_restaurante();
                     if(rest.equals(R.string.pronto)){
                         Toast.makeText(miContexto,rest,Toast.LENGTH_SHORT).show();
-                    }else Toast.makeText(miContexto,R.string.encuentrame+rest,Toast.LENGTH_SHORT).show();
+                    }else Toast.makeText(miContexto,"Encuéntrame en: "+rest,Toast.LENGTH_SHORT).show();
                 }
             });
             Nombre_comida = itemView.findViewById(R.id.txt_nombre_comida);
